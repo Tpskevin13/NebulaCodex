@@ -151,4 +151,4 @@ npm run eval
 npm run check:live -- groq/openai/gpt-oss-120b openrouter/z-ai/glm-5.3
 ```
 
-El detalle completo, incluidos los textos de salida y el uso de tokens, está en `docs/model-eval.json`. Las copias previas a las correcciones de scoring están en `docs/model-eval.pre-*.json`.
+El detalle completo, incluidos los textos de salida y el uso de tokens, está en `docs/model-eval.json`. Las copias previas a las correcciones de scoring (`model-eval.pre-*.json`) no se incluyen en el repositorio.

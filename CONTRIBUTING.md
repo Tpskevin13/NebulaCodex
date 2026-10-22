@@ -7,7 +7,7 @@
 Necesitás Node.js 18 o superior.
 
 ```bash
-git clone https://github.com/Tpskevin13/nebulacodex.git
+git clone https://github.com/Tpskevin13/NebulaCodex.git
 cd nebulacodex
 npm install
 npm run dev      # ejecuta la app desde src/

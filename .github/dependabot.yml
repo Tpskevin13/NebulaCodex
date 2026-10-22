@@ -1,3 +1,5 @@
+# Dependabot propone sólo actualizaciones menores y de parches. Los saltos de versión mayor
+# (por ejemplo Ink, React o TypeScript) pueden romper la app y se hacen a mano.
 version: 2
 updates:
   - package-ecosystem: npm
@@ -5,7 +7,16 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      dependencias:
+        update-types: ["minor", "patch"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]

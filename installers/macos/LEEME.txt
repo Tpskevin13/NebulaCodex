@@ -12,7 +12,7 @@ Opción 2: arrastrá NebulaCodex.app a la carpeta Aplicaciones.
         xattr -dr com.apple.quarantine /Applications/NebulaCodex.app
 
 Por qué aparece esa advertencia: NebulaCodex es software libre y esta versión no está firmada con un certificado de
-pago de Apple. El código fuente está en https://github.com/Tpskevin13/nebulacodex
+pago de Apple. El código fuente está en https://github.com/Tpskevin13/NebulaCodex
 
 Al abrir la app, macOS puede preguntar si NebulaCodex puede controlar la Terminal: aceptalo (es la forma en que abre su ventana).
 

@@ -8,7 +8,7 @@ Sólo la última versión publicada recibe correcciones de seguridad.
 
 **No abras un issue público con los detalles.** Usá el reporte privado de GitHub:
 pestaña **Security → Report a vulnerability** de este repositorio
-(<https://github.com/Tpskevin13/nebulacodex/security/advisories/new>).
+(<https://github.com/Tpskevin13/NebulaCodex/security/advisories/new>).
 
 Incluí, si podés: versión y sistema operativo, pasos para reproducirlo, el impacto que ves y, de ser posible, una propuesta de arreglo.
 Vas a recibir una respuesta con los próximos pasos; es un proyecto comunitario, así que los plazos son de mejor esfuerzo.

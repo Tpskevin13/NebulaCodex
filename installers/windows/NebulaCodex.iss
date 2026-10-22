@@ -10,7 +10,7 @@
 #endif
 #define AppName "NebulaCodex"
 #define AppPublisher "Tpskevin13"
-#define AppURL "https://github.com/Tpskevin13/nebulacodex"
+#define AppURL "https://github.com/Tpskevin13/NebulaCodex"
 
 [Setup]
 AppId={{B3E5C0D2-6F0A-4C57-9B7E-2D4A1F8E7C31}

@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Tpskevin13/nebulacodex/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Tpskevin13/nebulacodex/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/Tpskevin13/nebulacodex/releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/Tpskevin13/nebulacodex?include_prereleases&label=versi%C3%B3n"></a>
+  <a href="https://github.com/Tpskevin13/NebulaCodex/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Tpskevin13/NebulaCodex/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/Tpskevin13/NebulaCodex/releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/Tpskevin13/NebulaCodex?include_prereleases&label=versi%C3%B3n"></a>
   <a href="LICENSE"><img alt="Licencia MIT" src="https://img.shields.io/badge/licencia-MIT-blue.svg"></a>
 </p>
 
@@ -31,7 +31,7 @@ Todo lo que modifica algo te pide permiso antes de ejecutarse.
 
 ## Descargar e instalar
 
-Bajá el instalador de tu sistema desde la página de **[Releases](https://github.com/Tpskevin13/nebulacodex/releases/latest)**.
+Bajá el instalador de tu sistema desde la página de **[Releases](https://github.com/Tpskevin13/NebulaCodex/releases/latest)**.
 **No hace falta tener Node.js**: cada instalador trae el suyo.
 
 | Sistema | Archivo | Qué hace |
@@ -109,7 +109,7 @@ La evaluación de modelos, la metodología y las decisiones están en [`docs/MOD
 Requisitos: **Node.js 18 o superior** y npm.
 
 ```bash
-git clone https://github.com/Tpskevin13/nebulacodex.git
+git clone https://github.com/Tpskevin13/NebulaCodex.git
 cd nebulacodex
 npm install
 npm run build
@@ -154,7 +154,7 @@ este proyecto no está afiliado ni respaldado por ninguno de ellos.
 **NebulaCodex** is a free, open-source coding agent for the terminal (TypeScript + Ink). It can read, search, edit and move files, run commands and fetch web pages,
 using the LLM provider of your choice (27 presets + any OpenAI-compatible endpoint). Anything that changes your system asks for approval first.
 
-**Install:** download the installer for your OS from the [latest release](https://github.com/Tpskevin13/nebulacodex/releases/latest) — Windows `.exe` (or portable `.zip`),
+**Install:** download the installer for your OS from the [latest release](https://github.com/Tpskevin13/NebulaCodex/releases/latest) — Windows `.exe` (or portable `.zip`),
 macOS `.dmg`, Linux `.sh`. They bundle their own Node.js, so nothing else is required. The installers are unsigned (Windows SmartScreen / macOS Gatekeeper may warn on first run).
 Then open NebulaCodex and type `/providers` to choose a provider and paste your API key — all configuration happens inside the app.
 

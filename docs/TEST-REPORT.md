@@ -94,7 +94,7 @@ DeepSeek agregó una frase antes del tool call (`Voy a leer el archivo solicitad
 3. **Gemini 3.8 Flash:** cuatro tareas fallaron por 429/503 de la capa gratuita. Se reejecutaron con `--delay=20000` y pasaron al 100%; los tiempos de 35–61 s reflejan la cuota y los reintentos, no la velocidad del modelo.
 4. **Clasificador:** "Diseñá la arquitectura de un motor de render" caía en `image` por la palabra "render"; ahora cae en `reasoning`.
 
-Los datos crudos, incluidos textos y uso de tokens, están en `docs/model-eval.json`. Las copias previas a cada corrección están en `docs/model-eval.pre-*.json`.
+Los datos crudos, incluidos textos y uso de tokens, están en `docs/model-eval.json`. Las copias previas a cada corrección (`model-eval.pre-*.json`) no se incluyen en el repositorio.
 
 ## Verificación de configuración
 

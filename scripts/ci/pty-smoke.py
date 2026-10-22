@@ -27,6 +27,9 @@ pid, fd = pty.fork()
 if pid == 0:
     fcntl.ioctl(0, termios.TIOCSWINSZ, struct.pack("HHHH", 40, 120, 0, 0))
     os.environ["TERM"] = "xterm-256color"
+    # Ink, en un entorno de CI, sólo dibuja el último cuadro al salir. Se quitan esas variables para ver la interfaz como en una PC.
+    for key in [k for k in os.environ if k in ("CI", "CONTINUOUS_INTEGRATION", "BUILD_NUMBER", "RUN_ID") or k.startswith("CI_")]:
+        del os.environ[key]
     os.execvp(sys.argv[1], sys.argv[1:])
 
 ansi = re.compile(rb"\x1b\[[0-9;?:]*[ -/]*[@-~]|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)|\x1b[()][A-Za-z0-9]")

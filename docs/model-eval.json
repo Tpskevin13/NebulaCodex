@@ -1,0 +1,949 @@
+{
+  "generatedAt": "2026-10-20T22:42:19.202Z",
+  "tasks": [
+    {
+      "id": "code",
+      "title": "Generación de código",
+      "principalWeight": 0.15
+    },
+    {
+      "id": "debug",
+      "title": "Depuración async",
+      "principalWeight": 0.2
+    },
+    {
+      "id": "refactor",
+      "title": "Refactorización",
+      "principalWeight": 0.1
+    },
+    {
+      "id": "docs",
+      "title": "Documentación",
+      "principalWeight": 0.05
+    },
+    {
+      "id": "structured",
+      "title": "Especificación 3D",
+      "principalWeight": 0.1
+    },
+    {
+      "id": "threejs",
+      "title": "Código Three.js",
+      "principalWeight": 0.1
+    },
+    {
+      "id": "chat",
+      "title": "Conversación técnica",
+      "principalWeight": 0.1
+    },
+    {
+      "id": "tool",
+      "title": "Llamada a herramienta",
+      "principalWeight": 0.2
+    }
+  ],
+  "models": [
+    {
+      "id": "glm-5.3",
+      "label": "GLM 5.3",
+      "providerId": "openrouter",
+      "model": "z-ai/glm-5.3",
+      "price": {
+        "input": 0.08,
+        "output": 1.4
+      },
+      "note": "OpenRouter · relación calidad/precio",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 1,
+        "tool": 1
+      },
+      "principal": 1,
+      "mean": 1,
+      "medianLatency": 1735,
+      "usage": {
+        "input": 1271,
+        "output": 4297
+      },
+      "estimatedCostUsd": 0.006117479999999999
+    },
+    {
+      "id": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "providerId": "groq",
+      "model": "openai/gpt-oss-120b",
+      "price": {
+        "input": 0,
+        "output": 0
+      },
+      "note": "Groq · inferencia rápida; precio según plan de Groq",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 1,
+        "tool": 1
+      },
+      "principal": 1,
+      "mean": 1,
+      "medianLatency": 1877,
+      "usage": {
+        "input": 1633,
+        "output": 6623
+      },
+      "estimatedCostUsd": 0
+    },
+    {
+      "id": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "providerId": "nvidia",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "price": {
+        "input": 0.6,
+        "output": 2.4
+      },
+      "note": "NVIDIA NIM · modelo abierto grande",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 1,
+        "tool": 1
+      },
+      "principal": 1,
+      "mean": 1,
+      "medianLatency": 6267,
+      "usage": {
+        "input": 1428,
+        "output": 5144
+      },
+      "estimatedCostUsd": 0.0132024
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "providerId": "openrouter",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "price": {
+        "input": 0.03,
+        "output": 0.12
+      },
+      "note": "OpenRouter · costo muy bajo y 1M de contexto",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 1,
+        "tool": 1
+      },
+      "principal": 1,
+      "mean": 1,
+      "medianLatency": 5673,
+      "usage": {
+        "input": 1595,
+        "output": 10002
+      },
+      "estimatedCostUsd": 0.0012480899999999999
+    },
+    {
+      "id": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "providerId": "gemini",
+      "model": "gemini-3.8-flash",
+      "price": {
+        "input": 0,
+        "output": 0
+      },
+      "note": "Google AI Studio · capa gratuita; precio según plan",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 1,
+        "tool": 1
+      },
+      "principal": 1,
+      "mean": 1,
+      "medianLatency": 37509,
+      "usage": {
+        "input": 1094,
+        "output": 3054
+      },
+      "estimatedCostUsd": 0
+    },
+    {
+      "id": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "providerId": "openrouter",
+      "model": "openai/gpt-6-luna",
+      "price": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "note": "OpenRouter · variante económica y rápida",
+      "scores": {
+        "code": 1,
+        "debug": 1,
+        "refactor": 1,
+        "docs": 1,
+        "structured": 1,
+        "threejs": 1,
+        "chat": 0.833,
+        "tool": 1
+      },
+      "principal": 0.9833000000000001,
+      "mean": 0.979125,
+      "medianLatency": 4453,
+      "usage": {
+        "input": 1110,
+        "output": 6066
+      },
+      "estimatedCostUsd": 0.003144
+    }
+  ],
+  "results": [
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 14140,
+      "usage": {
+        "input": 136,
+        "output": 357
+      },
+      "chars": 1075,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError('Intervals must be an array.');\n  }\n\n  const copy = intervals.map((interval) => {\n    if (\n      !Array.isArray(interval) ||\n      interval.length !== 2 ||\n      typeof interval[0] !== 'number' ||\n      typeof interval[1] !== 'number' ||\n      !Number.isFinite(interval[0]) ||\n      !Number.isFinite(interval[1]) ||\n      interval[0] > interval[1]\n    ) {\n      throw new TypeError('Each interval must be a pair of finite numbers [start, end] with start <= end.');\n    }\n    return [interval[0], interval[1]];\n  });\n\n  if (copy.length === 0) {\n    return [];\n  }\n\n  copy.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n\n  const merged = [copy[0]];\n\n  for (let i = 1; i < copy.length; i++) {\n    const current = copy[i];\n    const lastMerged = merged[merged.length - 1];\n\n    if (current[0] <= lastMerged[1]) {\n      lastMerged[1] = Math.max(lastMerged[1], current[1]);\n    } else {\n      merged.push(current);\n    }\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 34771,
+      "usage": {
+        "input": 150,
+        "output": 116
+      },
+      "chars": 455,
+      "output": "```json\n{\n  \"bug\": \"Array.prototype.forEach no espera las promesas devueltas por callbacks asíncronos; la función retorna un arreglo vacío inmediatamente. Además, usar results.push en llamadas concurrentes no garantiza preservar el orden de llegada, y cualquier error lanzado dentro del callback no es capturado ni propagado por loadAll.\",\n  \"fixed\": \"async function loadAll(ids, fetchOne) {\\n  return Promise.all(ids.map((id) => fetchOne(id)));\\n}\"\n}\n```"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 46209,
+      "usage": {
+        "input": 197,
+        "output": 79
+      },
+      "chars": 246,
+      "output": "```js\nfunction activeUsers(users) {\n  return users\n    .filter((u) => u?.active === true && u.email?.indexOf(\"@\") > 0)\n    .map(({ id, email }) => ({\n      id,\n      email: email.trim().toLowerCase(),\n    }));\n}\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 51077,
+      "usage": {
+        "input": 152,
+        "output": 662
+      },
+      "chars": 2301,
+      "output": "```javascript\n/**\n * Calcula el tiempo de espera para reintentos utilizando retroceso exponencial\n * (exponential backoff) con un límite máximo y factor de variación aleatoria (jitter).\n *\n * Aplica un jitter de entre el 80% y el 120% (±20%) sobre el valor exponencial\n * calculado para evitar colisiones simultáneas (thundering herd).\n *\n * @param {number} attempt - Número o índice del intento actual (basado en 0 o 1).\n * @param {number} [baseMs=200] - Tiempo de espera base inicial en milisegundos.\n * @param {number} [maxMs=5000] - Límite máximo en milisegundos que puede alcanzar el cálculo exponencial antes del jitter.\n * @returns {number} Tiempo de espera resultante en milisegundos, redondeado al entero más cercano.\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n---\n\n## `retryDelay`\n\n### Propósito\nCalcula de manera dinámica el tiempo de espera necesario antes de ejecutar un reintento. Utiliza una estrategia de **retroceso exponencial** acotada por un **límite máximo** (`maxMs`) para evitar esperas excesivas, e introduce **jitter** aleatorio (variación de ±20%) para desincronizar clientes concurrentes y prevenir el efecto de *thundering herd*.\n\n### Parámetros\n- `attempt` (`number`): Índice o número de intento actual.\n- `baseMs` (`number`, opcional, por defecto `200`): Tiempo base inicial en milisegundos.\n- `maxMs` (`number`, opcional, por defecto `5000`): Límite máximo en milisegundos para el crecimiento exponencial.\n\n### Valor de retorno\n- `number`: Duración en milisegundos a esperar antes del próximo reintento.\n\n### Ejemplo de uso\n\n```javascript\nimport { retryDelay } from './retryDelay.js';\n\nasync function fetchWithRetry(url, maxAttempts = 5) {\n  for (let attempt = 0; attempt < maxAttempts; attempt++) {\n    try {\n      return await fetch(url);\n    } catch (error) {\n      if (attempt === maxAttempts - 1) throw error;\n\n      // Calcula la espera con retroceso exponencial, límite de 4s y jitter\n      const delay = retryDelay(attempt, 300, 4000);\n      console.warn(`Intento ${attempt + 1} fallido. Reintentando en ${delay}ms...`);\n      await new Promise((resolve) => setTimeout(resolve, delay));\n    }\n  }\n}\n```"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 60745,
+      "usage": {
+        "input": 208,
+        "output": 313
+      },
+      "chars": 1009,
+      "output": "{\"name\":\"Cristal Flotante Arcano\",\"style\":\"Low-Poly Estilizado\",\"polyBudget\":1250,\"dimensions\":{\"width\":1.2,\"height\":2.6,\"depth\":1.2},\"materials\":[{\"name\":\"Mat_Cristal_Nucleo\",\"colorHex\":\"#00F0FF\",\"metalness\":0.1,\"roughness\":0.15,\"emissive\":true},{\"name\":\"Mat_Anillo_Runico\",\"colorHex\":\"#E5A93C\",\"metalness\":0.85,\"roughness\":0.35,\"emissive\":true},{\"name\":\"Mat_Roca_Orbitante\",\"colorHex\":\"#3D354A\",\"metalness\":0.05,\"roughness\":0.9,\"emissive\":false}],\"animations\":[{\"name\":\"Flotacion_Y_Rotacion_Idle\",\"durationSeconds\":4.0,\"loop\":true}],\"textureStrategy\":\"Texture atlas único de 512x512 píxeles optimizado para empaquetar mapas de color base, emisivo y gradientes de sombreado, permitiendo un solo draw call.\",\"optimizationNotes\":[\"Uso de un solo hueso raíz o animación por vertex shader para evitar coste de cómputo de skinning en la CPU móvil.\",\"Geometría optimizada con vértices compartidos y eliminación de caras internas no visibles para reducir el recuento de triángulos procesados por el rasterizador.\"]}"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 19569,
+      "usage": {
+        "input": 83,
+        "output": 1333
+      },
+      "chars": 4167,
+      "output": "```js\nimport * as THREE from 'three';\n\nexport class FloatingCrystalScene {\n  constructor(container = document.body) {\n    this.container = container;\n    this.animationFrameId = null;\n\n    this.initScene();\n    this.initCamera();\n    this.initRenderer();\n    this.initLights();\n    this.initCrystal();\n    this.initResizeObserver();\n    this.animate();\n  }\n\n  initScene() {\n    this.scene = new THREE.Scene();\n    const bgColor = 0x070814;\n    this.scene.background = new THREE.Color(bgColor);\n    this.scene.fog = new THREE.FogExp2(bgColor, 0.12);\n  }\n\n  initCamera() {\n    const width = this.container.clientWidth || window.innerWidth;\n    const height = this.container.clientHeight || window.innerHeight;\n    this.camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);\n    this.camera.position.set(0, 0.5, 4.5);\n  }\n\n  initRenderer() {\n    this.renderer = new THREE.WebGLRenderer({ antialias: true });\n    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));\n    this.renderer.setSize(\n      this.container.clientWidth || window.innerWidth,\n      this.container.clientHeight || window.innerHeight\n    );\n    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;\n    this.renderer.toneMappingExposure = 1.2;\n    this.container.appendChild(this.renderer.domElement);\n  }\n\n  initLights() {\n    this.ambientLight = new THREE.AmbientLight(0x1a1d36, 1.5);\n    this.scene.add(this.ambientLight);\n\n    this.keyLight = new THREE.DirectionalLight(0xffffff, 2.5);\n    this.keyLight.position.set(3, 5, 2);\n    this.scene.add(this.keyLight);\n\n    this.pointLightCyan = new THREE.PointLight(0x00ffff, 4, 10);\n    this.pointLightCyan.position.set(-2, 1, 1.5);\n    this.scene.add(this.pointLightCyan);\n\n    this.pointLightMagenta = new THREE.PointLight(0xff0077, 3, 10);\n    this.pointLightMagenta.position.set(2, -1, -1.5);\n    this.scene.add(this.pointLightMagenta);\n  }\n\n  initCrystal() {\n    this.crystalGeometry = new THREE.OctahedronGeometry(1.2, 0);\n    this.crystalGeometry.scale(1, 1.8, 1);\n\n    this.crystalMaterial = new THREE.MeshStandardMaterial({\n      color: 0x11c5d9,\n      emissive: 0x052a3b,\n      roughness: 0.1,\n      metalness: 0.15,\n      flatShading: true\n    });\n\n    this.crystal = new THREE.Mesh(this.crystalGeometry, this.crystalMaterial);\n    this.scene.add(this.crystal);\n\n    this.clock = new THREE.Clock();\n  }\n\n  initResizeObserver() {\n    this.resizeObserver = new ResizeObserver(() => this.onResize());\n    this.resizeObserver.observe(this.container);\n  }\n\n  onResize() {\n    const width = this.container.clientWidth || window.innerWidth;\n    const height = this.container.clientHeight || window.innerHeight;\n\n    if (width === 0 || height === 0) return;\n\n    this.camera.aspect = width / height;\n    this.camera.updateProjectionMatrix();\n    this.renderer.setSize(width, height);\n  }\n\n  animate() {\n    this.animationFrameId = requestAnimationFrame(() => this.animate());\n\n    const elapsedTime = this.clock.getElapsedTime();\n\n    this.crystal.rotation.y = elapsedTime * 0.45;\n    this.crystal.rotation.z = Math.sin(elapsedTime * 0.3) * 0.15;\n    this.crystal.rotation.x = Math.cos(elapsedTime * 0.25) * 0.1;\n\n    this.crystal.position.y = Math.sin(elapsedTime * 1.5) * 0.25;\n\n    this.pointLightCyan.position.y = Math.sin(elapsedTime * 2) * 1.5;\n\n    this.renderer.render(this.scene, this.camera);\n  }\n\n  dispose() {\n    if (this.animationFrameId !== null) {\n      cancelAnimationFrame(this.animationFrameId);\n    }\n\n    if (this.resizeObserver) {\n      this.resizeObserver.disconnect();\n    }\n\n    this.scene.traverse((object) => {\n      if (object.isMesh) {\n        if (object.geometry) {\n          object.geometry.dispose();\n        }\n        if (object.material) {\n          if (Array.isArray(object.material)) {\n            object.material.forEach((mat) => mat.dispose());\n          } else {\n            object.material.dispose();\n          }\n        }\n      }\n    });\n\n    if (this.renderer) {\n      this.renderer.dispose();\n      if (this.renderer.domElement && this.renderer.domElement.parentNode) {\n        this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);\n      }\n    }\n  }\n}\n```"
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "chat",
+      "ok": true,
+      "score": 1,
+      "detail": "106 palabras",
+      "latencyMs": 40247,
+      "usage": {
+        "input": 59,
+        "output": 172
+      },
+      "chars": 707,
+      "output": "La diferencia clave es qué guardan en memoria:\n\n* **`useMemo`** guarda el **resultado** de ejecutar una función. Evita que recalcules operaciones costosas en cada render si las dependencias no cambiaron.\n* **`useCallback`** guarda la **definición de la función** en sí. Mantiene la misma referencia en memoria entre renders sin recrearla.\n\n**¿Cuándo conviene cada uno?**\n* Usá **`useMemo`** para transformar o procesar datos pesados (como filtrar o ordenar un array gigante) y no congelar la interfaz.\n* Usá **`useCallback`** cuando le pasás funciones como props a componentes hijos memorizados (con `React.memo`), evitando que se vuelvan a renderizar al pepe solo porque la referencia de la función cambió."
+    },
+    {
+      "model": "gemini-3.8-flash-direct",
+      "label": "Gemini 3.8 Flash (directo)",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 23981,
+      "usage": {
+        "input": 109,
+        "output": 22
+      },
+      "chars": 0,
+      "output": ""
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 8146,
+      "usage": {
+        "input": 176,
+        "output": 1318
+      },
+      "chars": 1169,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError('intervals must be an array');\n  }\n\n  const copied = [];\n\n  for (let i = 0; i < intervals.length; i++) {\n    const interval = intervals[i];\n\n    if (!Array.isArray(interval) || interval.length !== 2) {\n      throw new TypeError('Each interval must be an array of two numbers');\n    }\n\n    const [start, end] = interval;\n\n    if (\n      typeof start !== 'number' ||\n      typeof end !== 'number' ||\n      !Number.isFinite(start) ||\n      !Number.isFinite(end) ||\n      start > end\n    ) {\n      throw new TypeError('Each interval must contain finite numbers with start <= end');\n    }\n\n    copied.push([start, end]);\n  }\n\n  copied.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n\n  const merged = [];\n\n  for (const [start, end] of copied) {\n    if (merged.length === 0) {\n      merged.push([start, end]);\n      continue;\n    }\n\n    const last = merged[merged.length - 1];\n\n    if (start <= last[1]) {\n      if (end > last[1]) {\n        last[1] = end;\n      }\n    } else {\n      merged.push([start, end]);\n    }\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 2920,
+      "usage": {
+        "input": 177,
+        "output": 433
+      },
+      "chars": 535,
+      "output": "```json\n{\"bug\":\"`Array.prototype.forEach` no espera a los callbacks asíncronos: ignora las promesas que devuelve `await fetchOne(id)`, por lo que la función retorna el array `results` (vacío o incompleto) inmediatamente, antes de que las llamadas terminen. Tampoco se esperan los resultados, así que el orden no se garantiza y los rechazos de `fetchOne` quedan como unhandled rejections en lugar de propagarse al llamador.\",\"fixed\":\"async function loadAll(ids, fetchOne) {\\n  return Promise.all(ids.map((id) => fetchOne(id)));\\n}\"}\n```"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 2169,
+      "usage": {
+        "input": 213,
+        "output": 315
+      },
+      "chars": 243,
+      "output": "```js\nconst activeUsers = (users) =>\n  users\n    .filter(\n      (u) => u && u.active === true && u.email && u.email.indexOf(\"@\") > 0\n    )\n    .map((u) => ({ id: u.id, email: u.email.trim().toLowerCase() }));\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 9539,
+      "usage": {
+        "input": 182,
+        "output": 1720
+      },
+      "chars": 2294,
+      "output": "```js\n/**\n * Calcula el tiempo de espera para un reintento usando retroceso exponencial\n * con jitter aleatorio.\n *\n * La parte exponencial se calcula como `baseMs * 2 ** attempt` y se limita\n * a `maxMs`. Luego se aplica un jitter del ±20% (factor entre `0.8` y `1.2`)\n * para evitar que múltiples reintentos ocurran sincronizados.\n *\n * @param {number} attempt - Número de intento, normalmente base 0.\n * @param {number} [baseMs=200] - Retraso base en milisegundos.\n * @param {number} [maxMs=5000] - Límite máximo de la parte exponencial en milisegundos.\n * @returns {number} Tiempo de espera en milisegundos, redondeado.\n *\n * @example\n * // Primer reintento: alrededor de 200 ms con jitter\n * const delay1 = retryDelay(0);\n *\n * @example\n * // Tercer reintento con base personalizada: alrededor de 800 ms con jitter\n * const delay2 = retryDelay(2, 100);\n *\n * @example\n * // Intento alto: la parte exponencial se limita a maxMs antes del jitter\n * const delay3 = retryDelay(10, 200, 5000);\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n## `retryDelay(attempt, baseMs?, maxMs?)`\n\n### Propósito\n\nCalcula el tiempo de espera para un reintento usando retroceso exponencial con jitter aleatorio. La parte exponencial se limita con `maxMs`, y luego se aplica un jitter del ±20% para evitar reintentos sincronizados.\n\n### Parámetros\n\n- `attempt` (`number`): Número de intento, normalmente base 0.\n- `baseMs` (`number`, opcional, por defecto `200`): Retraso base en milisegundos.\n- `maxMs` (`number`, opcional, por defecto `5000`): Límite máximo de la parte exponencial en milisegundos. El valor final puede superar `maxMs` hasta aproximadamente un 20% debido al jitter.\n\n### Valor de retorno\n\n`number`: Tiempo de espera en milisegundos, redondeado.\n\n### Ejemplo de uso\n\n```js\nimport { retryDelay } from './retry.js';\n\n// Primer reintento: aproximadamente entre 160 y 240 ms\nconst delay1 = retryDelay(0);\n\n// Tercer reintento con base personalizada: aproximadamente entre 640 y 960 ms\nconst delay2 = retryDelay(2, 100);\n\n// Intento alto: la parte exponencial se limita a 5000 ms antes del jitter\nconst delay3 = retryDelay(10, 200, 5000);\n```"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 6519,
+      "usage": {
+        "input": 258,
+        "output": 1003
+      },
+      "chars": 1195,
+      "output": "{\"name\":\"Cristal Flotante Low-Poly\",\"style\":\"Fantasía estilizada low-poly para móvil\",\"polyBudget\":780,\"dimensions\":{\"width\":1.0,\"height\":1.6,\"depth\":1.0},\"materials\":[{\"name\":\"Cristal_Nucleo\",\"colorHex\":\"#4FD8FF\",\"metalness\":0.1,\"roughness\":0.15,\"emissive\":true},{\"name\":\"Cristal_Borde\",\"colorHex\":\"#A78BFA\",\"metalness\":0.2,\"roughness\":0.3,\"emissive\":true},{\"name\":\"Base_Roca\",\"colorHex\":\"#2E2A3B\",\"metalness\":0.0,\"roughness\":0.9,\"emissive\":false},{\"name\":\"Aro_Energia\",\"colorHex\":\"#FFD166\",\"metalness\":0.8,\"roughness\":0.25,\"emissive\":true}],\"animations\":[{\"name\":\"Rotacion_Flotacion\",\"durationSeconds\":4.0,\"loop\":true},{\"name\":\"Pulso_Emisivo\",\"durationSeconds\":1.5,\"loop\":true}],\"textureStrategy\":\"Atlas de texturas procedurales 512x512 para cristal, base y aro; emisión enmascarada por canal alfa y variación de color por vértice.\",\"optimizationNotes\":[\"Usar una sola malla con submeshes y atlas compartido para reducir draw calls.\",\"Mantener menos de 800 triángulos y evitar transparencias costosas salvo en el aro de energía.\",\"Animar rotación y flotación por transformación de objeto, sin skinning ni huesos.\",\"Aplicar compresión ETC2/ASTC y mipmaps limitados para móviles de gama baja.\"]}"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 17346,
+      "usage": {
+        "input": 126,
+        "output": 4319
+      },
+      "chars": 6795,
+      "output": "```js\n// floating-crystal.js\n// Módulo ESM autocontenido para Three.js: cristal low-poly flotante.\n// Uso:  const crystal = createFloatingCrystal(container);  ...  crystal.dispose();\n\nimport * as THREE from 'three';\n\n/**\n * Crea una escena con un cristal low-poly flotante.\n * @param {HTMLElement} container - Elemento DOM donde se monta el canvas.\n * @param {object} [options] - Ajustes opcionales (colores, niebla, velocidades).\n * @returns {{ scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer, crystal: THREE.Group, resize: () => void, dispose: () => void }}\n */\nexport function createFloatingCrystal(container, options = {}) {\n  if (!container) {\n    throw new Error('createFloatingCrystal: se requiere un contenedor DOM válido.');\n  }\n\n  // ---------------------------------------------------------------- configuración\n  const config = {\n    background: 0x070b18,\n    fogColor: 0x070b18,\n    fogNear: 7,\n    fogFar: 26,\n    crystalColor: 0x7fd8ff,\n    emissiveColor: 0x0d3b5c,\n    edgeColor: 0xdff6ff,\n    autoRotateSpeed: 0.45,\n    floatAmplitude: 0.18,\n    floatSpeed: 1.15,\n    pixelRatioMax: 2,\n    ...options\n  };\n\n  // ------------------------------------------------------------------- renderer\n  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });\n  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, config.pixelRatioMax));\n  renderer.outputColorSpace = THREE.SRGBColorSpace;\n  renderer.toneMapping = THREE.ACESFilmicToneMapping;\n  renderer.toneMappingExposure = 1.15;\n  renderer.setClearColor(config.background, 1);\n\n  const canvas = renderer.domElement;\n  canvas.style.display = 'block';\n  canvas.style.width = '100%';\n  canvas.style.height = '100%';\n  container.appendChild(canvas);\n\n  // --------------------------------------------------------------- escena / cámara\n  const scene = new THREE.Scene();\n  scene.background = new THREE.Color(config.background);\n  scene.fog = new THREE.Fog(config.fogColor, config.fogNear, config.fogFar);\n\n  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);\n  camera.position.set(0, 0.7, 6.2);\n  camera.lookAt(0, 0, 0);\n\n  // -------------------------------------------------------------------- luces\n  const ambient = new THREE.AmbientLight(0xffffff, 0.25);\n  scene.add(ambient);\n\n  const hemisphere = new THREE.HemisphereLight(0xbfe9ff, 0x101a2e, 1.0);\n  scene.add(hemisphere);\n\n  const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);\n  keyLight.position.set(4, 6, 5);\n  scene.add(keyLight);\n\n  const rimLight = new THREE.DirectionalLight(0x3a7bd5, 2.6);\n  rimLight.position.set(-5, -2.5, -4);\n  scene.add(rimLight);\n\n  const coreLight = new THREE.PointLight(config.crystalColor, 6, 9, 2);\n  coreLight.position.set(0, 0, 0);\n  scene.add(coreLight);\n\n  // -------------------------------------------------------------------- cristal\n  const crystal = new THREE.Group();\n  scene.add(crystal);\n\n  const geometry = new THREE.IcosahedronGeometry(1.5, 0);\n  const material = new THREE.MeshStandardMaterial({\n    color: config.crystalColor,\n    emissive: config.emissiveColor,\n    emissiveIntensity: 1.2,\n    flatShading: true,\n    metalness: 0.25,\n    roughness: 0.15,\n    transparent: true,\n    opacity: 0.92\n  });\n\n  const mesh = new THREE.Mesh(geometry, material);\n  crystal.add(mesh);\n\n  // Aristas luminosas para reforzar el look low-poly.\n  const edgesGeometry = new THREE.EdgesGeometry(geometry);\n  const edgesMaterial = new THREE.LineBasicMaterial({\n    color: config.edgeColor,\n    transparent: true,\n    opacity: 0.35\n  });\n  const edges = new THREE.LineSegments(edgesGeometry, edgesMaterial);\n  edges.scale.setScalar(1.002);\n  mesh.add(edges);\n\n  // Núcleo interior sutil (mismo grupo, rotación independiente).\n  const innerGeometry = new THREE.IcosahedronGeometry(0.72, 0);\n  const innerMaterial = new THREE.MeshBasicMaterial({\n    color: config.crystalColor,\n    transparent: true,\n    opacity: 0.18\n  });\n  const innerMesh = new THREE.Mesh(innerGeometry, innerMaterial);\n  crystal.add(innerMesh);\n\n  // --------------------------------------------------------------------- resize\n  function resize() {\n    const width = container.clientWidth || 1;\n    const height = container.clientHeight || 1;\n\n    camera.aspect = width / height;\n    camera.updateProjectionMatrix();\n\n    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, config.pixelRatioMax));\n    renderer.setSize(width, height, false);\n  }\n\n  let resizeObserver = null;\n  if (typeof ResizeObserver !== 'undefined') {\n    resizeObserver = new ResizeObserver(resize);\n    resizeObserver.observe(container);\n  }\n  window.addEventListener('resize', resize);\n  resize();\n\n  // -------------------------------------------------------------- bucle animado\n  const clock = new THREE.Clock();\n  let frameId = null;\n  let disposed = false;\n\n  function animate() {\n    if (disposed) return;\n    frameId = requestAnimationFrame(animate);\n\n    const delta = Math.min(clock.getDelta(), 0.1);\n    const elapsed = clock.elapsedTime;\n\n    crystal.rotation.y += config.autoRotateSpeed * delta;\n    crystal.rotation.x = Math.sin(elapsed * 0.6) * 0.09;\n\n    crystal.position.y = Math.sin(elapsed * config.floatSpeed) * config.floatAmplitude;\n\n    innerMesh.rotation.x -= config.autoRotateSpeed * 1.6 * delta;\n    innerMesh.rotation.z += config.autoRotateSpeed * 1.2 * delta;\n\n    coreLight.intensity = 5.5 + Math.sin(elapsed * 2.4) * 1.6;\n\n    renderer.render(scene, camera);\n  }\n\n  animate();\n\n  // --------------------------------------------------------------------- dispose\n  function dispose() {\n    if (disposed) return;\n    disposed = true;\n\n    if (frameId !== null) cancelAnimationFrame(frameId);\n    frameId = null;\n\n    window.removeEventListener('resize', resize);\n    if (resizeObserver) {\n      resizeObserver.disconnect();\n      resizeObserver = null;\n    }\n\n    // Libera geometrías, materiales y texturas de toda la jerarquía.\n    scene.traverse((object) => {\n      if (!object.isMesh && !object.isLine && !object.isPoints) return;\n\n      if (object.geometry) object.geometry.dispose();\n\n      const materials = Array.isArray(object.material)\n        ? object.material\n        : object.material\n          ? [object.material]\n          : [];\n\n      for (const mat of materials) {\n        for (const key of Object.keys(mat)) {\n          const value = mat[key];\n          if (value && value.isTexture) value.dispose();\n        }\n        mat.dispose();\n      }\n    });\n\n    scene.clear();\n\n    renderer.dispose();\n    if (typeof renderer.forceContextLoss === 'function') renderer.forceContextLoss();\n\n    if (canvas.parentNode === container) container.removeChild(canvas);\n  }\n\n  return { scene, camera, renderer, crystal, resize, dispose };\n}\n\nexport default createFloatingCrystal;\n```"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "chat",
+      "ok": true,
+      "score": 1,
+      "detail": "91 palabras",
+      "latencyMs": 4826,
+      "usage": {
+        "input": 96,
+        "output": 833
+      },
+      "chars": 602,
+      "output": "Che, la posta: `useMemo` te guarda el resultado de una cuenta o un objeto; `useCallback` te guarda la función misma, para que no cambie de referencia entre renders. `useMemo(() => calcular(), deps)` devuelve el valor memoizado; `useCallback(fn, deps)` devuelve la misma `fn` si las deps no cambian. Conviene `useMemo` para cálculos pesados o crear arrays/objetos que van como dependencia. Conviene `useCallback` para pasar handlers a hijos memoizados con `React.memo` o usarlos en deps de otros hooks. Ojo: no optimices de gusto; medí primero. `useCallback(fn, deps)` es casi `useMemo(() => fn, deps)`."
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 1046,
+      "usage": {
+        "input": 367,
+        "output": 61
+      },
+      "chars": 0,
+      "output": ""
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 1761,
+      "usage": {
+        "input": 153,
+        "output": 314
+      },
+      "chars": 1137,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError(\"La entrada debe ser un array de intervalos.\");\n  }\n\n  for (const interval of intervals) {\n    if (!Array.isArray(interval) || interval.length !== 2) {\n      throw new TypeError(\"Cada intervalo debe ser un par [inicio, fin].\");\n    }\n    const [start, end] = interval;\n    if (\n      typeof start !== \"number\" ||\n      typeof end !== \"number\" ||\n      !Number.isFinite(start) ||\n      !Number.isFinite(end) ||\n      start > end\n    ) {\n      throw new TypeError(\n        \"Cada intervalo debe tener números finitos con inicio <= fin.\"\n      );\n    }\n  }\n\n  const sorted = intervals\n    .map((interval) => [interval[0], interval[1]])\n    .sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n\n  const merged = [];\n  for (const [start, end] of sorted) {\n    if (merged.length > 0) {\n      const last = merged[merged.length - 1];\n      if (start <= last[1]) {\n        if (end > last[1]) {\n          last[1] = end;\n        }\n        continue;\n      }\n    }\n    merged.push([start, end]);\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 1131,
+      "usage": {
+        "input": 153,
+        "output": 123
+      },
+      "chars": 436,
+      "output": "```json\n{\n  \"bug\": \"forEach no espera promesas: la función devuelve results antes de que ningún await se resuelva, y como los push ocurren en orden de finalización, el orden puede variar. Además, un rechazo de fetchOne queda sin manejar (unhandled rejection).\",\n  \"fixed\": \"async function loadAll(ids, fetchOne) {\\n  const results = [];\\n  for (const id of ids) {\\n    results.push(await fetchOne(id));\\n  }\\n  return results;\\n}\"\n}\n```"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 1589,
+      "usage": {
+        "input": 191,
+        "output": 91
+      },
+      "chars": 248,
+      "output": "```js\nconst activeUsers = (users) =>\n  users\n    .filter((u) => u && u.active === true)\n    .filter((u) => u.email && u.email.indexOf(\"@\") > 0)\n    .map((u) => ({ id: u.id, email: u.email.trim().toLowerCase() }));\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 2877,
+      "usage": {
+        "input": 156,
+        "output": 567
+      },
+      "chars": 1830,
+      "output": "```js\n/**\n * Calcula el delay de reintentos con backoff exponencial y jitter aleatorio.\n *\n * El delay base crece de forma exponencial según el número de intento\n * (`baseMs * 2^attempt`), se limita a `maxMs` y luego se le aplica un jitter\n * aleatorio multiplicándolo por un factor entre 0.8 y 1.2 (±20%).\n *\n * @param {number} attempt - Número de intento actual (comienza en 0).\n * @param {number} [baseMs=200] - Delay base en milisegundos para el intento 0.\n * @param {number} [maxMs=5000] - Límite máximo del delay en milisegundos.\n * @returns {number} Delay en milisegundos (entero), con jitter aplicado.\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n---\n\n## `retryDelay(attempt, baseMs, maxMs)`\n\nCalcula el tiempo de espera entre reintentos utilizando **backoff exponencial con jitter**. El delay crece exponencialmente con cada intento, pero se **limita a un máximo** (`maxMs`, por defecto 5000 ms) y se le aplica un **jitter aleatorio del ±20%** para evitar que múltiples clientes reintenten de forma sincronizada.\n\n### Parámetros\n\n| Nombre | Tipo | Por defecto | Descripción |\n|---|---|---|---|\n| `attempt` | `number` | — | Número de intento actual (comienza en 0). |\n| `baseMs` | `number` | `200` | Delay base en milisegundos. |\n| `maxMs` | `number` | `5000` | Límite máximo del delay en milisegundos. |\n\n### Valor de retorno\n\n`number` — Delay en milisegundos (entero), con el jitter aplicado.\n\n### Ejemplo de uso\n\n```js\nfor (let attempt = 0; attempt <= 3; attempt++) {\n  try {\n    await fetch(url);\n    break;\n  } catch (err) {\n    const delay = retryDelay(attempt); // ~200, 400, 800, 1600 ms (±20%)\n    await new Promise((r) => setTimeout(r, delay));\n  }\n}\n```"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 7018,
+      "usage": {
+        "input": 224,
+        "output": 2292
+      },
+      "chars": 2187,
+      "output": "{\n  \"name\": \"Cristal Flotante de Mana\",\n  \"style\": \"Low-poly facetado con flat shading estilizado; silueta de gema hexagonal alargada con núcleo visible y fragmentos menores orbitando la punta superior\",\n  \"polyBudget\": 850,\n  \"dimensions\": {\n    \"width\": 1.2,\n    \"height\": 2.4,\n    \"depth\": 1.2\n  },\n  \"materials\": [\n    {\n      \"name\": \"Nucleo_Emisivo\",\n      \"colorHex\": \"#59F2E0\",\n      \"metalness\": 0.0,\n      \"roughness\": 0.1,\n      \"emissive\": true\n    },\n    {\n      \"name\": \"Facetas_Cristal\",\n      \"colorHex\": \"#A8D8FF\",\n      \"metalness\": 0.1,\n      \"roughness\": 0.05,\n      \"emissive\": false\n    },\n    {\n      \"name\": \"Runas_Doradas\",\n      \"colorHex\": \"#FFC85C\",\n      \"metalness\": 0.6,\n      \"roughness\": 0.3,\n      \"emissive\": true\n    },\n    {\n      \"name\": \"Fragmentos_Orbitales\",\n      \"colorHex\": \"#3E4A5E\",\n      \"metalness\": 0.0,\n      \"roughness\": 0.85,\n      \"emissive\": false\n    }\n  ],\n  \"animations\": [\n    {\n      \"name\": \"rotacion_lenta_ejeY\",\n      \"durationSeconds\": 8.0,\n      \"loop\": true\n    },\n    {\n      \"name\": \"flotacion_vertical_sinusoidal\",\n      \"durationSeconds\": 4.0,\n      \"loop\": true\n    },\n    {\n      \"name\": \"pulso_emisivo_nucleo\",\n      \"durationSeconds\": 2.5,\n      \"loop\": true\n    }\n  ],\n  \"textureStrategy\": \"Texturas 100% procedurales (rampas de gradiente para la emisión y ruido de Voronoi para grietas) horneadas a un único atlas de 256x256 con canales RGBA compartidos: R=máscara de grietas, G=runas, B=intensidad emisiva, A=variación de tinte; un solo atlas por variante de color minimiza memoria y draw calls en GPU móvil.\",\n  \"optimizationNotes\": [\n    \"Soldar vértices compartidos y hornear normales planas en la malla para evitar cálculos de iluminación en runtime.\",\n    \"Migrar flotación y rotación a vertex animation en shader (sin esqueleto ni Animator) para reducir costos de CPU en gama baja.\",\n    \"Implementar LOD1 de 320 triángulos para distancias mayores a 20 metros.\",\n    \"Usar GPU instancing con un solo material compartido para renderizar hasta 50 cristales en 1 draw call.\",\n    \"Limitar el material a un shader Simple Lit con alpha recortado (sin blending translúcido) para evitar overdraw en móvil.\"\n  ]\n}"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 3228,
+      "usage": {
+        "input": 101,
+        "output": 693
+      },
+      "chars": 2470,
+      "output": "```js\nimport * as THREE from 'three';\n\nexport function createCrystalScene(container = document.body) {\n  const scene = new THREE.Scene();\n  scene.background = new THREE.Color(0x0a0a14);\n  scene.fog = new THREE.Fog(0x0a0a14, 6, 16);\n\n  const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);\n  camera.position.set(0, 1.5, 7);\n\n  const renderer = new THREE.WebGLRenderer({ antialias: true });\n  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));\n  container.appendChild(renderer.domElement);\n\n  // Luces\n  scene.add(new THREE.AmbientLight(0x334455, 0.6));\n  const keyLight = new THREE.DirectionalLight(0xaabbff, 1.2);\n  keyLight.position.set(4, 6, 5);\n  scene.add(keyLight);\n  const rimLight = new THREE.PointLight(0xff77cc, 1.5, 20);\n  rimLight.position.set(-3, 2, -4);\n  scene.add(rimLight);\n\n  // Cristal low-poly\n  const geometry = new THREE.OctahedronGeometry(1.4, 0);\n  const material = new THREE.MeshStandardMaterial({\n    color: 0x88ccff,\n    emissive: 0x224466,\n    metalness: 0.3,\n    roughness: 0.25,\n    flatShading: true\n  });\n  const crystal = new THREE.Mesh(geometry, material);\n  scene.add(crystal);\n\n  // Base reflejante simple\n  const baseGeo = new THREE.CircleGeometry(3, 6);\n  const baseMat = new THREE.MeshStandardMaterial({\n    color: 0x111820, roughness: 0.8, flatShading: true\n  });\n  const base = new THREE.Mesh(baseGeo, baseMat);\n  base.rotation.x = -Math.PI / 2;\n  base.position.y = -2;\n  scene.add(base);\n\n  const clock = new THREE.Clock();\n\n  function resize() {\n    const w = container.clientWidth || window.innerWidth;\n    const h = container.clientHeight || window.innerHeight;\n    camera.aspect = w / h;\n    camera.updateProjectionMatrix();\n    renderer.setSize(w, h);\n  }\n\n  function animate() {\n    const t = clock.getElapsedTime();\n    crystal.rotation.y += 0.01;\n    crystal.rotation.x = Math.sin(t * 0.5) * 0.2;\n    crystal.position.y = Math.sin(t * 1.2) * 0.4;\n    renderer.render(scene, camera);\n    rafId = requestAnimationFrame(animate);\n  }\n\n  let rafId = 0;\n  window.addEventListener('resize', resize);\n  resize();\n  animate();\n\n  return {\n    dispose() {\n      cancelAnimationFrame(rafId);\n      window.removeEventListener('resize', resize);\n      geometry.dispose();\n      material.dispose();\n      baseGeo.dispose();\n      baseMat.dispose();\n      renderer.dispose();\n      if (renderer.domElement.parentNode) {\n        renderer.domElement.parentNode.removeChild(renderer.domElement);\n      }\n    }\n  };\n}\n```"
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "chat",
+      "ok": true,
+      "score": 1,
+      "detail": "118 palabras",
+      "latencyMs": 1709,
+      "usage": {
+        "input": 73,
+        "output": 201
+      },
+      "chars": 830,
+      "output": "**useMemo** memoriza el *resultado* de un cálculo: evita recomputar un valor costoso en cada render. Ideal para operaciones pesadas (filtrar listas grandes, cálculos complejos) o para mantener referencias estables que pasás como props a componentes memoizados.\n\n**useCallback** memoriza la *función misma*: devuelve la misma referencia entre renders salvo que cambien sus dependencias. Conviene cuando pasás callbacks como props a componentes con `React.memo` o a hooks de efectos, para evitar que se re-creen y disparen renders o efectos innecesarios.\n\nRegla práctica: si necesitás el valor de un cálculo, usá `useMemo`; si necesitás que una función mantenga su identidad, usá `useCallback`.\n\nOjo: no abuses de ninguno. La memorización también cuesta; en cálculos triviales o componentes chicos, muchas veces es contraproducente."
+    },
+    {
+      "model": "glm-5.3",
+      "label": "GLM 5.3",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 664,
+      "usage": {
+        "input": 220,
+        "output": 16
+      },
+      "chars": 0,
+      "output": ""
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 5013,
+      "usage": {
+        "input": 143,
+        "output": 410
+      },
+      "chars": 869,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError(\"intervals debe ser un array\");\n  }\n\n  const sorted = intervals.map((interval) => {\n    if (\n      !Array.isArray(interval) ||\n      interval.length !== 2 ||\n      !Number.isFinite(interval[0]) ||\n      !Number.isFinite(interval[1]) ||\n      interval[0] > interval[1]\n    ) {\n      throw new TypeError(\"Cada intervalo debe ser un par de números finitos con inicio <= fin\");\n    }\n\n    return [interval[0], interval[1]];\n  });\n\n  sorted.sort((a, b) => a[0] - b[0]);\n\n  const merged = [];\n\n  for (const interval of sorted) {\n    const last = merged[merged.length - 1];\n\n    if (!last || interval[0] > last[1]) {\n      merged.push(interval);\n    } else {\n      last[1] = Math.max(last[1], interval[1]);\n    }\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 3174,
+      "usage": {
+        "input": 147,
+        "output": 170
+      },
+      "chars": 322,
+      "output": "```json\n{\"bug\":\"forEach no espera las funciones async y loadAll devuelve results antes de que fetchOne termine. Además, los resultados se agregan en orden de finalización, no necesariamente en el orden de ids.\",\"fixed\":\"async function loadAll(ids, fetchOne) {\\n  return Promise.all(ids.map((id) => fetchOne(id)));\\n}\"}\n```"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 3893,
+      "usage": {
+        "input": 187,
+        "output": 283
+      },
+      "chars": 348,
+      "output": "```js\nfunction activeUsers(users) {\n  const out = [];\n\n  for (let i = 0; i < users.length; i += 1) {\n    const user = users[i];\n\n    if (user && user.active === true && user.email && user.email.indexOf(\"@\") > 0) {\n      out.push({ id: user.id, email: user.email.trim().toLowerCase() });\n    }\n  }\n\n  return out;\n}\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 7354,
+      "usage": {
+        "input": 149,
+        "output": 722
+      },
+      "chars": 1777,
+      "output": "## Función `retryDelay`\n\n```js\n/**\n * Calcula el retraso antes de volver a intentar una operación.\n *\n * El retraso aumenta exponencialmente según el número de intento, hasta que\n * el componente exponencial alcanza `maxMs`. Después se aplica un jitter\n * aleatorio para evitar que varios reintentos ocurran al mismo tiempo.\n *\n * El límite `maxMs` se aplica antes del jitter; por eso, el retraso final\n * puede superar ese valor hasta aproximadamente un 20 %.\n *\n * @param {number} attempt Número de intento, normalmente un entero no negativo.\n * @param {number} [baseMs=200] Retraso base en milisegundos.\n * @param {number} [maxMs=5000] Límite máximo del componente exponencial, en milisegundos.\n * @returns {number} Retraso calculado en milisegundos, redondeado al entero más cercano.\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n## Uso\n\n`retryDelay` calcula cuánto esperar antes de un reintento. Duplica el retraso base en cada intento y limita el componente exponencial a `maxMs`. Añade un jitter aleatorio de entre el 80 % y casi el 120 % para distribuir los reintentos; por ello, el resultado final puede superar `maxMs`.\n\n### Parámetros\n\n- `attempt` (`number`): número de intento, normalmente un entero no negativo.\n- `baseMs` (`number`, opcional): retraso base en milisegundos. Por defecto, `200`.\n- `maxMs` (`number`, opcional): límite del componente exponencial en milisegundos. Por defecto, `5000`.\n\n### Valor de retorno\n\nUn `number` con el retraso calculado en milisegundos, redondeado al entero más cercano.\n\n### Ejemplo\n\n```js\nconst delayMs = retryDelay(3);\nconsole.log(`Reintento en ${delayMs} ms`);\n```"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 5181,
+      "usage": {
+        "input": 216,
+        "output": 423
+      },
+      "chars": 1295,
+      "output": "{\n  \"name\": \"Cristal flotante\",\n  \"style\": \"Low-poly estilizado, con facetas geométricas y silueta cristalina vertical\",\n  \"polyBudget\": 840,\n  \"dimensions\": {\n    \"width\": 1.2,\n    \"height\": 2.4,\n    \"depth\": 1.1\n  },\n  \"materials\": [\n    {\n      \"name\": \"Cuerpo de cristal\",\n      \"colorHex\": \"#58D9E8\",\n      \"metalness\": 0.15,\n      \"roughness\": 0.22,\n      \"emissive\": false\n    },\n    {\n      \"name\": \"Facetas luminosas\",\n      \"colorHex\": \"#B8FFF7\",\n      \"metalness\": 0.05,\n      \"roughness\": 0.18,\n      \"emissive\": true\n    },\n    {\n      \"name\": \"Base mineral\",\n      \"colorHex\": \"#315C8A\",\n      \"metalness\": 0.35,\n      \"roughness\": 0.4,\n      \"emissive\": false\n    }\n  ],\n  \"animations\": [\n    {\n      \"name\": \"Flotación suave y rotación\",\n      \"durationSeconds\": 4,\n      \"loop\": true\n    }\n  ],\n  \"textureStrategy\": \"Materiales planos con variación de color por faceta y atlas compacto para detalles opcionales; evitar texturas de alta resolución.\",\n  \"optimizationNotes\": [\n    \"Usar una sola malla principal con normales planas para conservar las facetas y reducir llamadas de dibujo.\",\n    \"Limitar el número de materiales y reutilizarlos mediante un atlas de texturas.\",\n    \"Mantener el efecto de brillo con intensidad moderada para reducir el costo de posprocesado.\"\n  ]\n}"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 36057,
+      "usage": {
+        "input": 92,
+        "output": 3849
+      },
+      "chars": 6258,
+      "output": "```js\nimport * as THREE from 'three';\n\n/**\n * Cristal low-poly animado para insertar en un elemento contenedor.\n *\n * Uso:\n *   const cristal = new CrystalScene(document.querySelector('#visor'));\n *   // Cuando ya no se necesite:\n *   cristal.dispose();\n */\nexport class CrystalScene {\n  constructor(container, options = {}) {\n    if (!container) {\n      throw new Error('CrystalScene necesita un elemento contenedor.');\n    }\n\n    this.container = container;\n    this.disposed = false;\n    this.backgroundColor = options.backgroundColor ?? 0x080b18;\n\n    this.scene = new THREE.Scene();\n    this.scene.background = new THREE.Color(this.backgroundColor);\n    this.scene.fog = new THREE.Fog(this.backgroundColor, 7, 18);\n\n    this.camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);\n    this.camera.position.set(0, 0, 5.8);\n\n    this.renderer = new THREE.WebGLRenderer({\n      antialias: true,\n      alpha: false,\n      powerPreference: 'high-performance',\n    });\n    this.renderer.outputColorSpace = THREE.SRGBColorSpace;\n    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;\n    this.renderer.toneMappingExposure = 1.15;\n    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));\n    this.renderer.domElement.style.display = 'block';\n    this.renderer.domElement.style.width = '100%';\n    this.renderer.domElement.style.height = '100%';\n    this.container.appendChild(this.renderer.domElement);\n\n    this.crystal = new THREE.Group();\n    this.scene.add(this.crystal);\n\n    this.crystalGeometry = this.createCrystalGeometry();\n    this.crystalMaterial = new THREE.MeshPhysicalMaterial({\n      vertexColors: true,\n      flatShading: true,\n      roughness: 0.24,\n      metalness: 0.12,\n      clearcoat: 1,\n      clearcoatRoughness: 0.18,\n      emissive: 0x11172d,\n    });\n\n    const mesh = new THREE.Mesh(this.crystalGeometry, this.crystalMaterial);\n    this.crystal.add(mesh);\n\n    this.addLighting();\n\n    this.clock = new THREE.Clock();\n    this.resize = this.resize.bind(this);\n    this.renderer.setAnimationLoop(() => this.animate());\n\n    if (typeof ResizeObserver !== 'undefined') {\n      this.resizeObserver = new ResizeObserver(this.resize);\n      this.resizeObserver.observe(this.container);\n    } else {\n      window.addEventListener('resize', this.resize);\n    }\n\n    this.resize();\n  }\n\n  createCrystalGeometry() {\n    const sides = 8;\n    const phase = Math.PI / 8;\n    const levels = [\n      { y: -0.78, radius: 0.48 },\n      { y: -0.16, radius: 0.76 },\n      { y: 0.52, radius: 0.57 },\n    ];\n\n    const rings = levels.map((level, ringIndex) =>\n      Array.from({ length: sides }, (_, i) => {\n        const angle = (i / sides) * Math.PI * 2 + phase;\n        const variation = 1 + 0.055 * Math.sin(i * 2.31 + ringIndex * 1.7);\n        const radius = level.radius * variation;\n\n        return new THREE.Vector3(\n          Math.cos(angle) * radius,\n          level.y,\n          Math.sin(angle) * radius,\n        );\n      }),\n    );\n\n    const triangles = [];\n    const addTriangle = (a, b, c) => triangles.push(a, b, c);\n\n    // Facetas laterales trianguladas.\n    for (let level = 0; level < rings.length - 1; level++) {\n      const lower = rings[level];\n      const upper = rings[level + 1];\n\n      for (let i = 0; i < sides; i++) {\n        const next = (i + 1) % sides;\n        addTriangle(lower[i], upper[i], upper[next]);\n        addTriangle(lower[i], upper[next], lower[next]);\n      }\n    }\n\n    const top = new THREE.Vector3(0.03, 1.32, 0.01);\n    const bottom = new THREE.Vector3(-0.02, -1.34, 0);\n\n    for (let i = 0; i < sides; i++) {\n      const next = (i + 1) % sides;\n      addTriangle(rings[rings.length - 1][i], top, rings[rings.length - 1][next]);\n      addTriangle(bottom, rings[0][i], rings[0][next]);\n    }\n\n    const positions = [];\n    const colors = [];\n    const faceColor = new THREE.Color();\n\n    for (let face = 0; face < triangles.length / 3; face++) {\n      const hue = 0.59 + 0.075 * Math.sin(face * 2.399);\n      const lightness = 0.42 + 0.12 * Math.sin(face * 1.731 + 0.8);\n      faceColor.setHSL(hue, 0.78, lightness);\n\n      for (let vertex = 0; vertex < 3; vertex++) {\n        const point = triangles[face * 3 + vertex];\n        positions.push(point.x, point.y, point.z);\n        colors.push(faceColor.r, faceColor.g, faceColor.b);\n      }\n    }\n\n    const geometry = new THREE.BufferGeometry();\n    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));\n    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));\n    geometry.computeVertexNormals();\n    return geometry;\n  }\n\n  addLighting() {\n    this.scene.add(new THREE.HemisphereLight(0xcbdcff, 0x171329, 1.7));\n\n    const key = new THREE.DirectionalLight(0xffffff, 3.2);\n    key.position.set(3, 4, 5);\n    this.scene.add(key);\n\n    const blueFill = new THREE.PointLight(0x526dff, 20, 12);\n    blueFill.position.set(-3, 0.5, 2);\n    this.scene.add(blueFill);\n\n    const rim = new THREE.PointLight(0x7de7ff, 15, 10);\n    rim.position.set(1, -2, -3);\n    this.scene.add(rim);\n  }\n\n  resize() {\n    if (this.disposed) return;\n\n    const width = this.container.clientWidth || window.innerWidth || 1;\n    const height = this.container.clientHeight || window.innerHeight || 1;\n\n    this.camera.aspect = width / height;\n    this.camera.updateProjectionMatrix();\n    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));\n    this.renderer.setSize(width, height, false);\n  }\n\n  animate() {\n    if (this.disposed) return;\n\n    const time = this.clock.getElapsedTime();\n    this.crystal.rotation.y = time * 0.42;\n    this.crystal.rotation.x = Math.sin(time * 0.35) * 0.13;\n    this.crystal.position.y = Math.sin(time * 1.15) * 0.14;\n\n    this.renderer.render(this.scene, this.camera);\n  }\n\n  dispose() {\n    if (this.disposed) return;\n    this.disposed = true;\n\n    this.renderer.setAnimationLoop(null);\n    this.resizeObserver?.disconnect();\n    window.removeEventListener('resize', this.resize);\n\n    this.crystalGeometry.dispose();\n    this.crystalMaterial.dispose();\n    this.renderer.dispose();\n\n    if (this.renderer.domElement.parentNode === this.container) {\n      this.container.removeChild(this.renderer.domElement);\n    }\n  }\n}\n\nexport default CrystalScene;\n```"
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "chat",
+      "ok": true,
+      "score": 0.833,
+      "detail": "falta props/effects",
+      "latencyMs": 3107,
+      "usage": {
+        "input": 70,
+        "output": 187
+      },
+      "chars": 561,
+      "output": "`useMemo` memoriza el **resultado** de una función entre renders, mientras que `useCallback` memoriza la **función misma**.\n\nConviene usar `useMemo` si recalcular algo cuesta bastante o si necesitás mantener estable un valor que se pasa como prop. Usá `useCallback` cuando quieras conservar la identidad de una función, por ejemplo, al pasarla a un componente memoizado o incluirla en dependencias de un efecto.\n\nNo hace falta usarlos por defecto: agregan complejidad y sirven como optimización cuando hay un problema de rendimiento o de referencias inestables."
+    },
+    {
+      "model": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 1047,
+      "usage": {
+        "input": 106,
+        "output": 22
+      },
+      "chars": 0,
+      "output": ""
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 1495,
+      "usage": {
+        "input": 207,
+        "output": 559
+      },
+      "chars": 1158,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError('Input must be an array');\n  }\n\n  // Validate and copy intervals\n  const copied = intervals.map((pair, idx) => {\n    if (!Array.isArray(pair) || pair.length !== 2) {\n      throw new TypeError(`Interval at index ${idx} must be an array of two elements`);\n    }\n    const [start, end] = pair;\n    if (!Number.isFinite(start) || !Number.isFinite(end)) {\n      throw new TypeError(`Interval at index ${idx} must contain finite numbers`);\n    }\n    if (start > end) {\n      throw new TypeError(`Interval at index ${idx} has start > end`);\n    }\n    return [start, end];\n  });\n\n  // Sort by start\n  const sorted = copied.sort((a, b) => a[0] - b[0]);\n\n  const merged = [];\n  for (const [start, end] of sorted) {\n    if (merged.length === 0) {\n      merged.push([start, end]);\n      continue;\n    }\n    const last = merged[merged.length - 1];\n    // Overlap or contiguous (touching)\n    if (start <= last[1]) {\n      last[1] = Math.max(last[1], end);\n    } else {\n      merged.push([start, end]);\n    }\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 1582,
+      "usage": {
+        "input": 211,
+        "output": 585
+      },
+      "chars": 777,
+      "output": "```json\n{\n  \"bug\": \"El bucle forEach con una función async no espera a que se resuelvan las promesas, por lo que `results` se llena con promesas pendientes y la función retorna antes de que terminen. Además, el orden de inserción en `results` depende del momento en que cada `await` se complete, rompiendo el orden original de `ids`. Los errores también quedan atrapados dentro del callback y no se propagan al llamador.\",\n  \"fixed\": \"async function loadAll(ids, fetchOne) {\\n  // Ejecutamos todas las llamadas en paralelo manteniendo el orden original de los ids\\n  const promises = ids.map(id => fetchOne(id));\\n  // Await de todas las promesas; si alguna falla, el error se propaga automáticamente\\n  const results = await Promise.all(promises);\\n  return results;\\n}\"\n}\n```"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 1036,
+      "usage": {
+        "input": 251,
+        "output": 355
+      },
+      "chars": 271,
+      "output": "```js\nfunction activeUsers(users) {\n  return users\n    .filter(u => u && u.active === true && typeof u.email === 'string' && u.email.indexOf('@') > 0)\n    .map(u => ({\n      id: u.id,\n      email: u.email.trim().toLowerCase()\n    }));\n}\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 2172,
+      "usage": {
+        "input": 213,
+        "output": 907
+      },
+      "chars": 2849,
+      "output": "```js\n/**\n * Calcula el tiempo de espera (en milisegundos) para reintentos con\n * back‑off exponencial y jitter.\n *\n * @param {number} attempt - Número de intento (comienza en 0). Cada intento\n *   incrementa exponencialmente el tiempo de espera.\n * @param {number} [baseMs=200] - Tiempo base en milisegundos que se multiplica\n *   exponencialmente. Valor por defecto: 200 ms.\n * @param {number} [maxMs=5000] - Límite máximo de tiempo de espera, sin importar\n *   el número de intentos. Valor por defecto: 5000 ms.\n * @returns {number} Tiempo de espera calculado, redondeado al milisegundo\n *   más cercano. El valor incluye un jitter aleatorio entre ‑20 % y +20 % del\n *   tiempo exponencial, y nunca supera `maxMs`.\n *\n * @example\n * // Primer intento (attempt = 0)\n * const delay0 = retryDelay(0); // ≈ 200 ms ± jitter\n *\n * // Quinto intento (attempt = 5)\n * const delay5 = retryDelay(5); // ≈ 6400 ms, pero limitado a 5000 ms ± jitter\n *\n * // Con valores personalizados\n * const customDelay = retryDelay(2, 100, 2000); // ≈ 400 ms ± jitter, ≤ 2000 ms\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n## README – `retryDelay`\n\n### Propósito\nCalcula el intervalo de espera para reintentos, aplicando un **back‑off exponencial** y añadiendo **jitter** aleatorio para evitar la sincronización de múltiples clientes. El intervalo nunca supera el límite máximo especificado.\n\n### Parámetros\n| Parámetro | Tipo | Descripción | Valor por defecto |\n|-----------|------|-------------|-------------------|\n| `attempt` | `number` | Número de intento (comienza en 0). Cada intento incrementa el tiempo exponencialmente. | — |\n| `baseMs`  | `number` | Tiempo base en milisegundos. Se multiplica por 2ⁿ según el intento. | `200` |\n| `maxMs`   | `number` | Límite máximo de tiempo de espera, impone un techo al valor exponencial. | `5000` |\n\n### Valor de retorno\n`number` – Tiempo de espera en milisegundos, redondeado al entero más cercano. El valor incluye jitter (±20 % del tiempo calculado) y está acotado por `maxMs`.\n\n### Ejemplo de uso\n```js\nimport { retryDelay } from './retryDelay.js';\n\nasync function fetchWithRetry(url, retries = 5) {\n  for (let attempt = 0; attempt <= retries; attempt++) {\n    try {\n      return await fetch(url);\n    } catch (err) {\n      if (attempt === retries) throw err;\n      const delay = retryDelay(attempt); // 200 ms, 400 ms, 800 ms, … con jitter\n      await new Promise(res => setTimeout(res, delay));\n    }\n  }\n}\n```\n\nEl jitter introducido (`0.8 + Math.random() * 0.4`) asegura que cada espera varíe entre el 80 % y el 120 % del intervalo exponencial, mientras que `maxMs` garantiza que el tiempo nunca supere los 5 segundos (a menos que se configure otro valor)."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 2568,
+      "usage": {
+        "input": 280,
+        "output": 1089
+      },
+      "chars": 1160,
+      "output": "{\n  \"name\": \"Floating Crystal LowPoly\",\n  \"style\": \"Low-Poly Fantasy\",\n  \"polyBudget\": 1200,\n  \"dimensions\": {\n    \"width\": 1.2,\n    \"height\": 2.0,\n    \"depth\": 1.2\n  },\n  \"materials\": [\n    {\n      \"name\": \"CrystalCore\",\n      \"colorHex\": \"#7FC8FF\",\n      \"metalness\": 0.8,\n      \"roughness\": 0.1,\n      \"emissive\": false\n    },\n    {\n      \"name\": \"FacetEdges\",\n      \"colorHex\": \"#FFFFFF\",\n      \"metalness\": 0.2,\n      \"roughness\": 0.5,\n      \"emissive\": false\n    },\n    {\n      \"name\": \"GlowAura\",\n      \"colorHex\": \"#00FFAA\",\n      \"metalness\": 0.0,\n      \"roughness\": 0.9,\n      \"emissive\": true\n    }\n  ],\n  \"animations\": [\n    {\n      \"name\": \"FloatAndRotate\",\n      \"durationSeconds\": 5,\n      \"loop\": true\n    }\n  ],\n  \"textureStrategy\": \"Procedural texture generation using a single atlas for all material variations.\",\n  \"optimizationNotes\": [\n    \"Combine meshes that share the same material to reduce draw calls.\",\n    \"Use vertex cache optimization and merge duplicate vertices.\",\n    \"Implement LOD levels to switch to a simpler mesh at far distances.\",\n    \"Bake ambient occlusion into the texture atlas to avoid runtime calculations.\"\n  ]\n}"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 4875,
+      "usage": {
+        "input": 156,
+        "output": 2172
+      },
+      "chars": 3778,
+      "output": "```js\nimport * as THREE from 'three';\n\nexport class CrystalScene {\n  /**\n   * @param {HTMLElement} container - Element where the renderer will be appended.\n   */\n  constructor(container) {\n    this.container = container;\n    this._initRenderer();\n    this._initScene();\n    this._initCamera();\n    this._addLights();\n    this._addCrystal();\n\n    this._onResize = this._onResize.bind(this);\n    window.addEventListener('resize', this._onResize, false);\n\n    this._animate = this._animate.bind(this);\n    this._frameId = requestAnimationFrame(this._animate);\n  }\n\n  /* -------------------- Setup -------------------- */\n  _initRenderer() {\n    const { clientWidth: w, clientHeight: h } = this.container;\n    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });\n    this.renderer.setPixelRatio(window.devicePixelRatio);\n    this.renderer.setSize(w, h);\n    this.container.appendChild(this.renderer.domElement);\n  }\n\n  _initScene() {\n    this.scene = new THREE.Scene();\n    this.scene.fog = new THREE.FogExp2(0x111122, 0.015);\n    this.scene.background = new THREE.Color(0x111122);\n  }\n\n  _initCamera() {\n    const { clientWidth: w, clientHeight: h } = this.container;\n    this.camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);\n    this.camera.position.set(0, 1, 3);\n  }\n\n  _addLights() {\n    const ambient = new THREE.AmbientLight(0xffffff, 0.6);\n    this.scene.add(ambient);\n\n    const dir = new THREE.DirectionalLight(0xffffff, 1);\n    dir.position.set(5, 10, 7);\n    this.scene.add(dir);\n  }\n\n  _addCrystal() {\n    // Low‑poly crystal: elongated octahedron\n    const geometry = new THREE.OctahedronGeometry(0.5, 0);\n    geometry.scale(1, 2, 1); // stretch Y\n\n    // Small random vertex displacement (buffer geometry)\n    const pos = geometry.attributes.position;\n    for (let i = 0; i < pos.count; i++) {\n      const dx = (Math.random() - 0.5) * 0.05;\n      const dy = (Math.random() - 0.5) * 0.05;\n      const dz = (Math.random() - 0.5) * 0.05;\n      pos.setXYZ(i, pos.getX(i) + dx, pos.getY(i) + dy, pos.getZ(i) + dz);\n    }\n    pos.needsUpdate = true;\n    geometry.computeVertexNormals();\n\n    const material = new THREE.MeshPhysicalMaterial({\n      color: 0x88ccee,\n      metalness: 0,\n      roughness: 0.1,\n      transmission: 0.9, // glass‑like transparency\n      thickness: 0.5,\n      clearcoat: 1,\n      clearcoatRoughness: 0.1,\n      envMapIntensity: 1,\n    });\n\n    this.crystal = new THREE.Mesh(geometry, material);\n    this.scene.add(this.crystal);\n  }\n\n  /* -------------------- Animation -------------------- */\n  _animate() {\n    this.crystal.rotation.y += 0.005;\n    this.crystal.rotation.x += 0.002;\n    this.renderer.render(this.scene, this.camera);\n    this._frameId = requestAnimationFrame(this._animate);\n  }\n\n  /* -------------------- Resize -------------------- */\n  _onResize() {\n    const { clientWidth: w, clientHeight: h } = this.container;\n    this.camera.aspect = w / h;\n    this.camera.updateProjectionMatrix();\n    this.renderer.setSize(w, h);\n  }\n\n  /* -------------------- Dispose -------------------- */\n  dispose() {\n    cancelAnimationFrame(this._frameId);\n    window.removeEventListener('resize', this._onResize);\n\n    this.scene.traverse((obj) => {\n      if (obj.isMesh) {\n        obj.geometry.dispose();\n        if (Array.isArray(obj.material)) {\n          obj.material.forEach((m) => m.dispose());\n        } else {\n          obj.material.dispose();\n        }\n      }\n    });\n\n    this.renderer.dispose();\n    if (this.renderer.domElement.parentNode) {\n      this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);\n    }\n\n    // Nullify references for GC\n    this.scene = null;\n    this.camera = null;\n    this.renderer = null;\n    this.container = null;\n    this.crystal = null;\n  }\n}\n```"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "chat",
+      "ok": true,
+      "score": 1,
+      "detail": "98 palabras",
+      "latencyMs": 2250,
+      "usage": {
+        "input": 134,
+        "output": 902
+      },
+      "chars": 635,
+      "output": "Che, `useMemo` y `useCallback` son hooks de memoización. `useMemo` devuelve el **valor** que calculaste y lo vuelve a crear solo si cambian sus dependencias; lo usás para evitar cálculos pesados en cada render. `useCallback` devuelve la **función** memoizada, manteniéndola estable entre renders mientras sus dependencias no cambien; sirve para pasar callbacks a componentes hijos o a hooks que dependen de la referencia (por ej. `useEffect`). Conviene `useMemo` cuando el resultado es costoso y se reutiliza; conviene `useCallback` cuando la función se pasa a props o se usa como dependencia y no querés que se regenere a cada render."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "label": "GPT-OSS 120B (Groq)",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 453,
+      "usage": {
+        "input": 181,
+        "output": 54
+      },
+      "chars": 0,
+      "output": ""
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "code",
+      "ok": true,
+      "score": 1,
+      "detail": "todos los casos y validaciones",
+      "latencyMs": 5500,
+      "usage": {
+        "input": 159,
+        "output": 738
+      },
+      "chars": 1106,
+      "output": "```js\nfunction mergeIntervals(intervals) {\n  if (!Array.isArray(intervals)) {\n    throw new TypeError('Input must be an array');\n  }\n\n  const validated = intervals.map((interval, index) => {\n    if (!Array.isArray(interval) || interval.length !== 2) {\n      throw new TypeError(`Interval at index ${index} is not a pair`);\n    }\n    const [start, end] = interval;\n    if (\n      typeof start !== 'number' ||\n      typeof end !== 'number' ||\n      !Number.isFinite(start) ||\n      !Number.isFinite(end)\n    ) {\n      throw new TypeError(`Interval at index ${index} contains non-finite numbers`);\n    }\n    if (start > end) {\n      throw new TypeError(`Interval at index ${index} has start > end`);\n    }\n    return [start, end];\n  });\n\n  validated.sort((a, b) => a[0] - b[0]);\n\n  const merged = [];\n  for (const [start, end] of validated) {\n    if (merged.length === 0 || start > merged[merged.length - 1][1]) {\n      merged.push([start, end]);\n    } else {\n      merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], end);\n    }\n  }\n\n  return merged;\n}\n\nmodule.exports = mergeIntervals;\n```"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "debug",
+      "ok": true,
+      "score": 1,
+      "detail": "JSON · explica el bug · sin forEach async · orden correcto · propaga errores",
+      "latencyMs": 4303,
+      "usage": {
+        "input": 155,
+        "output": 389
+      },
+      "chars": 274,
+      "output": "```json\n{\"bug\":\"El uso de forEach con una función async no espera a que cada promesa se resuelva; la función devuelve el array vacío antes de que fetchOne termine.\",\"fixed\":\"async function loadAll(ids, fetchOne) {\\n  return Promise.all(ids.map(id => fetchOne(id)));\\n}\"}\n```"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "refactor",
+      "ok": true,
+      "score": 1,
+      "detail": "5/5 casos",
+      "latencyMs": 3851,
+      "usage": {
+        "input": 194,
+        "output": 400
+      },
+      "chars": 247,
+      "output": "```js\nconst activeUsers = (users = []) =>\n  users\n    .filter(u => u && u.active === true)\n    .filter(u => u.email && u.email.indexOf(\"@\") > 0)\n    .map(u => ({ id: u.id, email: u.email.trim().toLowerCase() }));\n\nmodule.exports = activeUsers;\n```"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "docs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 7033,
+      "usage": {
+        "input": 163,
+        "output": 714
+      },
+      "chars": 1915,
+      "output": "```js\n/**\n * Calcula el tiempo de espera antes de reintentar una operación.\n *\n * Utiliza un backoff exponencial con jitter para evitar colisiones.\n * El retraso crece como `baseMs * 2^attempt` hasta un máximo de `maxMs`.\n * Se añade un factor aleatorio entre 0.8 y 1.2 (jitter) y se redondea al entero más cercano.\n *\n * @param {number} attempt - Número de intento actual (base 0).\n * @param {number} [baseMs=200] - Tiempo base en milisegundos para el primer intento.\n * @param {number} [maxMs=5000] - Límite superior del retraso en milisegundos.\n * @returns {number} Retraso calculado en milisegundos, con jitter aplicado.\n */\nexport function retryDelay(attempt, baseMs = 200, maxMs = 5000) {\n  const exponential = Math.min(maxMs, baseMs * 2 ** attempt);\n  return Math.round(exponential * (0.8 + Math.random() * 0.4));\n}\n```\n\n## README – `retryDelay`\n\n**Propósito**  \nProporciona un retraso con backoff exponencial y jitter para estrategias de reintento, evitando sobrecargas sincronizadas.\n\n**Parámetros**  \n| Nombre | Tipo | Defecto | Descripción |\n|--------|------|---------|-------------|\n| `attempt` | `number` | – | Índice del intento (0 para el primer reintento). |\n| `baseMs` | `number` | `200` | Milisegundos base para el primer intento. |\n| `maxMs` | `number` | `5000` | Límite máximo del retraso (cap). |\n\n**Valor de retorno**  \n`number` – Milisegundos a esperar antes del siguiente intento, ya redondeados y con jitter aplicado.\n\n**Ejemplo de uso**\n\n```js\nimport { retryDelay } from './retryDelay.js';\n\nasync function fetchWithRetry(url, maxAttempts = 5) {\n  for (let attempt = 0; attempt < maxAttempts; attempt++) {\n    try {\n      const resp = await fetch(url);\n      if (resp.ok) return resp;\n    } catch (err) {\n      // ignorar y reintentar\n    }\n    const delay = retryDelay(attempt);\n    await new Promise(r => setTimeout(r, delay));\n  }\n  throw new Error('Máximo de intentos alcanzado');\n}\n```"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "structured",
+      "ok": true,
+      "score": 1,
+      "detail": "esquema completo",
+      "latencyMs": 14367,
+      "usage": {
+        "input": 239,
+        "output": 790
+      },
+      "chars": 1008,
+      "output": "{\n  \"name\": \"FloatingCrystal\",\n  \"style\": \"Low-Poly Fantasy\",\n  \"polyBudget\": 1200,\n  \"dimensions\": {\n    \"width\": 1.2,\n    \"height\": 2.0,\n    \"depth\": 1.2\n  },\n  \"materials\": [\n    {\n      \"name\": \"Core\",\n      \"colorHex\": \"#00FFAA\",\n      \"metalness\": 0.2,\n      \"roughness\": 0.1,\n      \"emissive\": true\n    },\n    {\n      \"name\": \"Facet\",\n      \"colorHex\": \"#FFFFFF\",\n      \"metalness\": 0.0,\n      \"roughness\": 0.3,\n      \"emissive\": false\n    },\n    {\n      \"name\": \"Glow\",\n      \"colorHex\": \"#FFD700\",\n      \"metalness\": 0.5,\n      \"roughness\": 0.2,\n      \"emissive\": true\n    }\n  ],\n  \"animations\": [\n    {\n      \"name\": \"RotateY\",\n      \"durationSeconds\": 4,\n      \"loop\": true\n    },\n    {\n      \"name\": \"FloatUpDown\",\n      \"durationSeconds\": 3,\n      \"loop\": true\n    }\n  ],\n  \"textureStrategy\": \"atlas with shared UV layout\",\n  \"optimizationNotes\": [\n    \"Use single draw call by packing all crystal parts into one atlas texture.\",\n    \"Enable GPU instancing for multiple crystals in scene.\"\n  ]\n}"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "threejs",
+      "ok": true,
+      "score": 1,
+      "detail": "completo",
+      "latencyMs": 23064,
+      "usage": {
+        "input": 106,
+        "output": 1323
+      },
+      "chars": 3212,
+      "output": "```js\nimport * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';\n\n/**\n * Crea una escena Three.js con un cristal low‑poly flotante.\n * @param {HTMLCanvasElement} canvas – Canvas donde se renderizará la escena.\n * @returns {{ dispose: () => void }} Objeto con método de limpieza.\n */\nexport function createCrystalScene(canvas) {\n  // ---------- Renderer ----------\n  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });\n  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));\n  renderer.setSize(canvas.clientWidth, canvas.clientHeight);\n  renderer.outputEncoding = THREE.sRGBEncoding;\n\n  // ---------- Scene ----------\n  const scene = new THREE.Scene();\n  scene.fog = new THREE.Fog(0x0a0a0a, 1, 12); // niebla suave\n\n  // ---------- Camera ----------\n  const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);\n  camera.position.set(0, 0, 5);\n\n  // ---------- Lights ----------\n  const ambient = new THREE.AmbientLight(0xffffff, 0.6);\n  scene.add(ambient);\n\n  const dirLight = new THREE.DirectionalLight(0xffffff, 1);\n  dirLight.position.set(3, 5, 4);\n  scene.add(dirLight);\n\n  const rimLight = new THREE.DirectionalLight(0x88ccff, 0.5);\n  rimLight.position.set(-3, -2, -3);\n  scene.add(rimLight);\n\n  // ---------- Crystal Geometry (low‑poly) ----------\n  const baseGeo = new THREE.IcosahedronGeometry(1, 0); // 20 caras, muy low‑poly\n  // Pequeño desplazamiento aleatorio para aspecto \"cristalino\"\n  const posAttr = baseGeo.getAttribute('position');\n  for (let i = 0; i < posAttr.count; i++) {\n    const v = new THREE.Vector3().fromBufferAttribute(posAttr, i);\n    v.addScaledVector(v.clone().normalize(), (Math.random() - 0.5) * 0.2);\n    posAttr.setXYZ(i, v.x, v.y, v.z);\n  }\n  baseGeo.computeVertexNormals();\n\n  // ---------- Crystal Material ----------\n  const material = new THREE.MeshStandardMaterial({\n    color: 0x66ccff,\n    metalness: 0.2,\n    roughness: 0.1,\n    transmission: 0.9,\n    thickness: 1.5,\n    envMapIntensity: 1.2,\n    transparent: true,\n    opacity: 0.85,\n    flatShading: true,\n  });\n\n  const crystal = new THREE.Mesh(baseGeo, material);\n  scene.add(crystal);\n\n  // ---------- Animation ----------\n  let rafId;\n  const animate = () => {\n    rafId = requestAnimationFrame(animate);\n    crystal.rotation.x += 0.003;\n    crystal.rotation.y += 0.005;\n    renderer.render(scene, camera);\n  };\n  animate();\n\n  // ---------- Responsive Resize ----------\n  const onResize = () => {\n    const w = canvas.clientWidth;\n    const h = canvas.clientHeight;\n    renderer.setSize(w, h, false);\n    camera.aspect = w / h;\n    camera.updateProjectionMatrix();\n  };\n  window.addEventListener('resize', onResize);\n\n  // ---------- Dispose ----------\n  function dispose() {\n    cancelAnimationFrame(rafId);\n    window.removeEventListener('resize', onResize);\n\n    // Geometrías / Materiales\n    baseGeo.dispose();\n    material.dispose();\n\n    // Renderer\n    renderer.dispose();\n    renderer.forceContextLoss();\n    const gl = renderer.getContext();\n    if (gl) gl.getExtension('WEBGL_lose_context')?.loseContext();\n\n    // Limpiar referencias\n    scene.clear();\n  }\n\n  return { dispose };\n}\n```"
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "chat",
+      "ok": true,
+      "score": 1,
+      "detail": "86 palabras",
+      "latencyMs": 8501,
+      "usage": {
+        "input": 79,
+        "output": 724
+      },
+      "chars": 525,
+      "output": "useMemo memoiza un valor; useCallback memoiza una función. Con useMemo guardás el resultado de un cálculo pesado para no repetirlo en cada render. Con useCallback guardás la referencia de una función, útil cuando la pasás como prop a componentes memoizados o la usás en dependencias de otros hooks. Usá useMemo cuando el costo está en computar un dato (listas filtradas, derivados). Usá useCallback cuando el costo está en crear la función nueva cada render y eso rompe la memoización de hijos. En resumen: valor vs. función."
+    },
+    {
+      "model": "nemotron-ultra",
+      "label": "Nemotron 3 Ultra (NVIDIA)",
+      "task": "tool",
+      "ok": true,
+      "score": 1,
+      "detail": "llamó herramienta · nombre correcto · ruta correcta",
+      "latencyMs": 795,
+      "usage": {
+        "input": 333,
+        "output": 66
+      },
+      "chars": 0,
+      "output": ""
+    }
+  ],
+  "notes": {
+    "threejsScoring": "Heurística corregida para aceptar imports por CDN, geometrías BufferGeometry, ResizeObserver y métodos de clase dispose(). Resultados guardados re-puntuados sin nuevas llamadas.",
+    "deepseekRefactor": "Reejecutado tras ampliar el presupuesto de reintento a 12k tokens; el intento anterior se había quedado sin salida por razonamiento.",
+    "geminiRetry": "Tareas bloqueadas por 429/503 reejecutadas con --delay=20000 para respetar la cuota gratuita; los tiempos incluyen espera/retries del proveedor."
+  },
+  "rescoredAt": "2026-10-20T22:58:09.410Z"
+}

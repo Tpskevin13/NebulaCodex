@@ -15,13 +15,13 @@
     "anthropic",
     "ollama"
   ],
-  "homepage": "https://github.com/Tpskevin13/nebulacodex#readme",
+  "homepage": "https://github.com/Tpskevin13/NebulaCodex#readme",
   "bugs": {
-    "url": "https://github.com/Tpskevin13/nebulacodex/issues"
+    "url": "https://github.com/Tpskevin13/NebulaCodex/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tpskevin13/nebulacodex.git"
+    "url": "git+https://github.com/Tpskevin13/NebulaCodex.git"
   },
   "license": "MIT",
   "author": "Tpskevin13",

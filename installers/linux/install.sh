@@ -58,7 +58,7 @@ fi
 
 # Comprueba que el Node incluido arranca (falla, por ejemplo, en distribuciones con musl como Alpine).
 if ! NODE_VERSION=$("$PAYLOAD/runtime/node" --version 2>/dev/null); then
-  fail "el Node.js incluido no se puede ejecutar en este sistema (¿Alpine/musl o glibc muy vieja?). Instalá Node.js 18+ y usá el código fuente: https://github.com/Tpskevin13/nebulacodex"
+  fail "el Node.js incluido no se puede ejecutar en este sistema (¿Alpine/musl o glibc muy vieja?). Instalá Node.js 18+ y usá el código fuente: https://github.com/Tpskevin13/NebulaCodex"
 fi
 
 if [ "$MODE" = system ]; then

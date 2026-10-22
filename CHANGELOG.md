@@ -15,4 +15,4 @@ Primera versión pública.
 - Integración continua en Windows, macOS y Linux, y publicación automática de Releases al subir un tag `vX.Y.Z`.
 - Licencia MIT, documentación (README, auditoría, informe de pruebas, modelos y proveedores) y guías de contribución y seguridad.
 
-[0.1.0]: https://github.com/Tpskevin13/nebulacodex/releases/tag/v0.1.0
+[0.1.0]: https://github.com/Tpskevin13/NebulaCodex/releases/tag/v0.1.0
