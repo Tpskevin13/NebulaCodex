@@ -13,12 +13,14 @@ permissions:
 
 concurrency:
   group: release-${{ github.ref }}
-  cancel-in-progress: false
+  # Un push nuevo a main reemplaza a la prueba anterior; un tag nunca se cancela.
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
 
 jobs:
   test:
     name: Pruebas previas
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -41,6 +43,7 @@ jobs:
     name: Instalador · ${{ matrix.target }}
     needs: test
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
@@ -64,7 +67,7 @@ jobs:
       - name: Probar el instalador (instalar, abrir, desinstalar)
         run: |
           version=$(node -p "require('./package.json').version")
-          bash scripts/ci/run.sh "Probar instalador Linux" bash scripts/ci/test-linux-installer.sh "release/NebulaCodex-$version-${{ matrix.target }}.sh" "$version"
+          RUN_TIMEOUT=240 bash scripts/ci/run.sh "Probar instalador Linux" bash scripts/ci/test-linux-installer.sh "release/NebulaCodex-$version-${{ matrix.target }}.sh" "$version"
       - uses: actions/upload-artifact@v4
         with:
           name: installer-${{ matrix.target }}
@@ -76,6 +79,7 @@ jobs:
     name: Instalador · macOS
     needs: test
     runs-on: macos-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -89,7 +93,7 @@ jobs:
       - name: Probar el instalador (montar, instalar, abrir, desinstalar)
         run: |
           version=$(node -p "require('./package.json').version")
-          bash scripts/ci/run.sh "Probar instalador macOS" bash scripts/ci/test-macos-installer.sh "release/NebulaCodex-$version-macos.dmg" "$version"
+          RUN_TIMEOUT=240 bash scripts/ci/run.sh "Probar instalador macOS" bash scripts/ci/test-macos-installer.sh "release/NebulaCodex-$version-macos.dmg" "$version"
       - uses: actions/upload-artifact@v4
         with:
           name: installer-macos
@@ -101,6 +105,7 @@ jobs:
     name: Instalador · Windows
     needs: test
     runs-on: windows-latest
+    timeout-minutes: 30
     defaults:
       run:
         shell: bash
@@ -139,6 +144,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: [linux, macos, windows]
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
     steps:
