@@ -6,9 +6,11 @@ dmg=$(cd "$(dirname "$1")" && pwd)/$(basename "$1")
 version=$2
 here=$(cd "$(dirname "$0")" && pwd)
 
+echo "== montar el disco"
 mnt=$(mktemp -d)
 # -noverify: la verificación de checksum de hdiutil se queda colgada en los runners de macOS.
 hdiutil attach "$dmg" -mountpoint "$mnt" -nobrowse -readonly -noverify -noautofsck -noautoopen
+echo "== disco montado en $mnt"
 trap 'hdiutil detach "$mnt" -force >/dev/null 2>&1 || true' EXIT
 
 echo "== contenido del disco"

@@ -26,7 +26,7 @@ done
 
 procs=
 if [ "$hung" -eq 1 ]; then
-  procs=$(ps -axo pid,ppid,stat,etime,command 2>/dev/null | grep -v -E ' \[[^]]+\]$' | tail -n 40)
+  procs=$(ps -axo pid,ppid,stat,etime,command 2>/dev/null | grep -E 'hdiutil|hdik|diskimages|hdid|ditto|xattr|node|python|run\.sh|test-|bash|sh -c|osascript|Terminal' | grep -v -E 'grep|ps -axo' | cut -c1-200 | tail -n 15)
   pkill -P "$pid" 2>/dev/null
   kill "$pid" 2>/dev/null
   code=124
@@ -38,13 +38,13 @@ sleep 1
 kill "$tailpid" 2>/dev/null
 
 if [ "$code" -ne 0 ]; then
-  msg=$(tail -n 60 "$log" | sed $'s/\x1b\\[[0-9;]*[A-Za-z]//g')
+  msg=$(tail -n 40 "$log" | sed $'s/\x1b\\[[0-9;]*[A-Za-z]//g' | cut -c1-300)
   if [ "$hung" -eq 1 ]; then
-    msg="SE COLGÓ (más de ${timeout} s). Procesos:
-${procs}
+    msg="SE COLGÓ (más de ${timeout} s). Última salida:
+${msg}
 
-Última salida:
-${msg}"
+Procesos relacionados:
+${procs}"
   fi
   msg=${msg//'%'/'%25'}
   msg=${msg//$'\r'/'%0D'}
