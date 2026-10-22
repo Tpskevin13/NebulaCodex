@@ -50,21 +50,51 @@ while time.time() < deadline:
             found = True
             break
 
-# Salir con Ctrl+C y, si no responde, terminar el proceso.
-for _ in range(2):
+def drain(seconds):
+    """Lee y descarta lo que escriba la app: en macOS un proceso no termina de salir mientras la terminal tenga salida sin leer."""
+    end = time.time() + seconds
+    while time.time() < end:
+        if fd < 0:
+            time.sleep(0.2)
+            continue
+        ready, _, _ = select.select([fd], [], [], 0.2)
+        if ready:
+            try:
+                if not os.read(fd, 65536):
+                    return
+            except OSError:
+                return
+
+
+def reap(seconds):
+    end = time.time() + seconds
+    while time.time() < end:
+        try:
+            done, _ = os.waitpid(pid, os.WNOHANG)
+        except ChildProcessError:
+            return True
+        if done:
+            return True
+        drain(0.2)
+    return False
+
+
+# Salir con Ctrl+C y, si no responde, terminar el proceso. Nunca se espera de forma indefinida.
+try:
+    os.write(fd, b"\x03")
+except OSError:
+    pass
+if not reap(3):
     try:
-        os.write(fd, b"\x03")
+        os.kill(pid, signal.SIGKILL)
+    except ProcessLookupError:
+        pass
+    try:
+        os.close(fd)  # al cerrar la terminal, el proceso termina de salir aunque tuviera salida pendiente
     except OSError:
-        break
-    time.sleep(0.5)
-try:
-    os.kill(pid, signal.SIGKILL)
-except ProcessLookupError:
-    pass
-try:
-    os.waitpid(pid, 0)
-except ChildProcessError:
-    pass
+        pass
+    fd = -1
+    reap(5)
 
 if found:
     print(f"OK: la app arrancó y mostró «{EXPECTED}».")
