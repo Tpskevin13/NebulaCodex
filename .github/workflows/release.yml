@@ -65,7 +65,7 @@ jobs:
         run: |
           version=$(node -p "require('./package.json').version")
           bash scripts/ci/run.sh "Probar instalador Linux" bash scripts/ci/test-linux-installer.sh "release/NebulaCodex-$version-${{ matrix.target }}.sh" "$version"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: installer-${{ matrix.target }}
           path: release/*
@@ -90,7 +90,7 @@ jobs:
         run: |
           version=$(node -p "require('./package.json').version")
           bash scripts/ci/run.sh "Probar instalador macOS" bash scripts/ci/test-macos-installer.sh "release/NebulaCodex-$version-macos.dmg" "$version"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: installer-macos
           path: release/*
@@ -127,7 +127,7 @@ jobs:
             -Installer "release/NebulaCodex-$version-windows-x64-setup.exe" `
             -Portable "release/NebulaCodex-$version-windows-x64-portable.zip" `
             -Version $version
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: installer-windows-x64
           path: release/*
