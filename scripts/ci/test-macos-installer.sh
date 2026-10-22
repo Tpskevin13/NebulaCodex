@@ -7,7 +7,8 @@ version=$2
 here=$(cd "$(dirname "$0")" && pwd)
 
 mnt=$(mktemp -d)
-hdiutil attach "$dmg" -mountpoint "$mnt" -nobrowse -readonly
+# -noverify: la verificación de checksum de hdiutil se queda colgada en los runners de macOS.
+hdiutil attach "$dmg" -mountpoint "$mnt" -nobrowse -readonly -noverify -noautofsck -noautoopen
 trap 'hdiutil detach "$mnt" -force >/dev/null 2>&1 || true' EXIT
 
 echo "== contenido del disco"
