@@ -167,7 +167,13 @@ jobs:
           sed "s/{{VERSION}}/$version/g" .github/release-notes.md > notes.md
           flags=()
           case "$GITHUB_REF_NAME" in *-*) flags+=(--prerelease) ;; esac
-          gh release create "$GITHUB_REF_NAME" release/* \
-            --title "NebulaCodex $version" \
-            --notes-file notes.md \
-            "${flags[@]}"
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            # El Release ya existía (por ejemplo, creado desde la web de GitHub al elegir un tag nuevo): se le agregan los archivos.
+            gh release upload "$GITHUB_REF_NAME" release/* --clobber
+            gh release edit "$GITHUB_REF_NAME" --title "NebulaCodex $version" --notes-file notes.md --draft=false "${flags[@]}"
+          else
+            gh release create "$GITHUB_REF_NAME" release/* \
+              --title "NebulaCodex $version" \
+              --notes-file notes.md \
+              "${flags[@]}"
+          fi

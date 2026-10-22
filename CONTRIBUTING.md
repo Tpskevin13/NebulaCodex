@@ -40,7 +40,8 @@ HOME=$(mktemp -d) sh release/NebulaCodex-*-linux-x64.sh --no-desktop
 
 1. Actualizá `version` en `package.json` y `package-lock.json` (`npm version <x.y.z> --no-git-tag-version`) y el `CHANGELOG.md`.
 2. Hacé commit en `main` y esperá a que la CI y el workflow *Release* (en modo prueba) estén en verde.
-3. `git tag vX.Y.Z && git push origin vX.Y.Z`: el workflow construye los instaladores, los prueba en cada sistema y publica el Release.
+3. Subí el tag: `git tag vX.Y.Z && git push origin vX.Y.Z`, o en GitHub: *Releases → Draft a new release → Choose a tag → escribí `vX.Y.Z` → Create new tag on publish → Publish*.
+   El workflow construye los instaladores, los prueba en cada sistema y los adjunta al Release.
    Un tag con guion (`v1.0.0-rc.1`) se publica como *pre-release*.
 
 ## Regenerar recursos
