@@ -1,0 +1,167 @@
+name: Release
+
+# En cada push a main se arman y prueban los instaladores (sin publicar nada).
+# Al subir un tag vX.Y.Z (que coincida con "version" de package.json) se publica un GitHub Release con los instaladores.
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Pruebas previas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: El tag coincide con package.json
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error title=Versión::El tag $GITHUB_REF_NAME no coincide con la versión de package.json (v$version)."
+            exit 1
+          fi
+      - run: bash scripts/ci/run.sh "npm ci" npm ci --no-audit --no-fund
+      - run: bash scripts/ci/run.sh "npm run build" npm run build
+      - run: bash scripts/ci/run.sh "npm test" npm test
+
+  linux:
+    name: Instalador · ${{ matrix.target }}
+    needs: test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: linux-x64
+            os: ubuntu-latest
+          - target: linux-arm64
+            os: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: bash scripts/ci/run.sh "npm ci" npm ci --no-audit --no-fund
+      - run: bash scripts/ci/run.sh "npm run build" npm run build
+      - name: Empaquetar
+        run: bash scripts/ci/run.sh "Empaquetar ${{ matrix.target }}" node scripts/package.mjs --target ${{ matrix.target }}
+      - name: Herramientas para validar el menú
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq desktop-file-utils
+      - name: Probar el instalador (instalar, abrir, desinstalar)
+        run: |
+          version=$(node -p "require('./package.json').version")
+          bash scripts/ci/run.sh "Probar instalador Linux" bash scripts/ci/test-linux-installer.sh "release/NebulaCodex-$version-${{ matrix.target }}.sh" "$version"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer-${{ matrix.target }}
+          path: release/*
+          retention-days: 14
+          compression-level: 0
+
+  macos:
+    name: Instalador · macOS
+    needs: test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: bash scripts/ci/run.sh "npm ci" npm ci --no-audit --no-fund
+      - run: bash scripts/ci/run.sh "npm run build" npm run build
+      - name: Empaquetar
+        run: bash scripts/ci/run.sh "Empaquetar macOS" node scripts/package.mjs --target macos
+      - name: Probar el instalador (montar, instalar, abrir, desinstalar)
+        run: |
+          version=$(node -p "require('./package.json').version")
+          bash scripts/ci/run.sh "Probar instalador macOS" bash scripts/ci/test-macos-installer.sh "release/NebulaCodex-$version-macos.dmg" "$version"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer-macos
+          path: release/*
+          retention-days: 14
+          compression-level: 0
+
+  windows:
+    name: Instalador · Windows
+    needs: test
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Instalar Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) { choco install innosetup --no-progress -y }
+          Get-Item "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" | Select-Object FullName, VersionInfo
+      - run: bash scripts/ci/run.sh "npm ci" npm ci --no-audit --no-fund
+      - run: bash scripts/ci/run.sh "npm run build" npm run build
+      - name: Empaquetar
+        run: bash scripts/ci/run.sh "Empaquetar Windows" node scripts/package.mjs --target windows-x64
+      - name: Probar el instalador (instalar, abrir, desinstalar)
+        shell: pwsh
+        run: |
+          $version = node -p "require('./package.json').version"
+          ./scripts/ci/test-windows-installer.ps1 `
+            -Installer "release/NebulaCodex-$version-windows-x64-setup.exe" `
+            -Portable "release/NebulaCodex-$version-windows-x64-portable.zip" `
+            -Version $version
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer-windows-x64
+          path: release/*
+          retention-days: 14
+          compression-level: 0
+
+  publish:
+    name: Publicar Release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [linux, macos, windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: installer-*
+          merge-multiple: true
+          path: release
+      - name: Sumas de verificación
+        run: |
+          cd release
+          sha256sum NebulaCodex-* > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+      - name: Crear el Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          sed "s/{{VERSION}}/$version/g" .github/release-notes.md > notes.md
+          flags=()
+          case "$GITHUB_REF_NAME" in *-*) flags+=(--prerelease) ;; esac
+          gh release create "$GITHUB_REF_NAME" release/* \
+            --title "NebulaCodex $version" \
+            --notes-file notes.md \
+            "${flags[@]}"

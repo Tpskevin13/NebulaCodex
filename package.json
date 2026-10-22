@@ -1,0 +1,65 @@
+{
+  "name": "nebulacodex",
+  "version": "0.1.0",
+  "description": "Agente de código libre para la terminal. Usa Anthropic, NVIDIA, Ollama, Gemini, Groq y más.",
+  "keywords": [
+    "ai",
+    "agent",
+    "coding-agent",
+    "cli",
+    "terminal",
+    "tui",
+    "ink",
+    "llm",
+    "openai-compatible",
+    "anthropic",
+    "ollama"
+  ],
+  "homepage": "https://github.com/Tpskevin13/nebulacodex#readme",
+  "bugs": {
+    "url": "https://github.com/Tpskevin13/nebulacodex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tpskevin13/nebulacodex.git"
+  },
+  "license": "MIT",
+  "author": "Tpskevin13",
+  "type": "module",
+  "bin": {
+    "nebulacodex": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "assets/icon.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.tsx",
+    "start": "node dist/index.js",
+    "test": "tsx --test test/smoke.test.ts test/rows.test.ts test/markdown.test.ts test/paste.test.ts test/screen.test.ts test/agent.test.ts test/routing.test.ts test/providers.test.ts test/export.test.ts test/tools-safety.test.ts test/cli.test.ts",
+    "eval": "tsx scripts/eval.ts",
+    "check:live": "tsx scripts/live-check.ts",
+    "package": "node scripts/package.mjs",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "gradient-string": "^3.0.0",
+    "ink": "^5.0.1",
+    "ink-text-input": "^6.0.0",
+    "marked": "15.0.12",
+    "react": "^18.3.1",
+    "string-width": "7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,29 @@
+#!/bin/sh
+# Lanzador de NebulaCodex para Linux y macOS: usa el Node.js incluido en la instalación.
+# Funciona desde un enlace simbólico (por ejemplo ~/.local/bin/nebulacodex) y respeta la carpeta actual.
+self=$0
+while [ -L "$self" ]; do
+  dir=$(cd "$(dirname "$self")" && pwd)
+  target=$(readlink "$self")
+  case "$target" in
+    /*) self=$target ;;
+    *) self=$dir/$target ;;
+  esac
+done
+here=$(cd "$(dirname "$self")/.." && pwd)
+
+node="$here/runtime/node"
+if [ ! -x "$node" ]; then
+  # macOS: el paquete trae un Node por arquitectura
+  case "$(uname -m)" in
+    arm64 | aarch64) arch=arm64 ;;
+    *) arch=x64 ;;
+  esac
+  node="$here/runtime/node-$arch"
+fi
+if [ ! -x "$node" ]; then
+  echo "NebulaCodex: no se encontró el Node.js incluido en $here/runtime." >&2
+  exit 1
+fi
+
+exec "$node" "$here/app/dist/index.js" "$@"

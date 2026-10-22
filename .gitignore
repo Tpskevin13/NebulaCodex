@@ -1,0 +1,17 @@
+node_modules/
+dist/
+**/bin/
+**/obj/
+.nebulacodex-smoke-*/
+*.tsbuildinfo
+.dotnet-home/
+.nuget/
+.appdata/
+.env
+.env.*
+!.env.example
+release/
+build/
+*.log
+__pycache__/
+*.pyc

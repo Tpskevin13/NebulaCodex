@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Vulnerabilidad de seguridad
+    url: https://github.com/Tpskevin13/nebulacodex/security/advisories/new
+    about: Reportala de forma privada, no en un issue público.

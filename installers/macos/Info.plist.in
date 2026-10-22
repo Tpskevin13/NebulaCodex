@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key><string>es</string>
+  <key>CFBundleExecutable</key><string>NebulaCodex</string>
+  <key>CFBundleIconFile</key><string>NebulaCodex</string>
+  <key>CFBundleIdentifier</key><string>io.github.tpskevin13.nebulacodex</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleName</key><string>NebulaCodex</string>
+  <key>CFBundleDisplayName</key><string>NebulaCodex</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>@VERSION@</string>
+  <key>CFBundleVersion</key><string>@VERSION@</string>
+  <key>LSApplicationCategoryType</key><string>public.app-category.developer-tools</string>
+  <key>LSMinimumSystemVersion</key><string>@MIN_MACOS@</string>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSAppleEventsUsageDescription</key><string>NebulaCodex abre una ventana de Terminal para ejecutarse.</string>
+  <key>NSHumanReadableCopyright</key><string>MIT License · Tpskevin13</string>
+</dict>
+</plist>

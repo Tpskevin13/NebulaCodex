@@ -1,0 +1,41 @@
+name: Reportar un error
+description: Algo no funciona como esperabas
+labels: [bug]
+body:
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Contá qué hiciste, qué esperabas y qué ocurrió en cambio.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión de NebulaCodex
+      description: Ejecutá `nebulacodex --version`
+      placeholder: "NebulaCodex 0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema operativo
+      options: [Windows 10/11, macOS, Linux]
+    validations:
+      required: true
+  - type: dropdown
+    id: instalacion
+    attributes:
+      label: ¿Cómo lo instalaste?
+      options: [Instalador de Windows, Windows portátil, Instalador de macOS, Instalador de Linux, Desde el código fuente]
+  - type: input
+    id: proveedor
+    attributes:
+      label: Proveedor y modelo
+      placeholder: "groq / openai/gpt-oss-120b"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Mensajes de error o capturas
+      description: "**No pegues tus API keys.**"

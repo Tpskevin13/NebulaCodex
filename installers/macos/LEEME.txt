@@ -1,0 +1,21 @@
+NebulaCodex - instalación en macOS
+==================================
+
+Opción 1 (recomendada): hacé doble clic en "Instalar NebulaCodex.command".
+  - Copia NebulaCodex a Aplicaciones, crea un acceso directo en el Escritorio y el comando "nebulacodex".
+  - Si macOS dice que no puede verificar al desarrollador: hacé clic derecho (o Control + clic) sobre el archivo,
+    elegí "Abrir" y confirmá "Abrir". Sólo hace falta la primera vez.
+
+Opción 2: arrastrá NebulaCodex.app a la carpeta Aplicaciones.
+  - La primera vez, clic derecho sobre la app > Abrir.
+  - Si macOS la sigue bloqueando, abrí Terminal y ejecutá:
+        xattr -dr com.apple.quarantine /Applications/NebulaCodex.app
+
+Por qué aparece esa advertencia: NebulaCodex es software libre y esta versión no está firmada con un certificado de
+pago de Apple. El código fuente está en https://github.com/Tpskevin13/nebulacodex
+
+Al abrir la app, macOS puede preguntar si NebulaCodex puede controlar la Terminal: aceptalo (es la forma en que abre su ventana).
+
+Primer uso: la configuración (proveedor, API key, modelo) se hace dentro de la app. Escribí /providers.
+
+Para desinstalar: "Desinstalar NebulaCodex.command" (en este mismo disco).

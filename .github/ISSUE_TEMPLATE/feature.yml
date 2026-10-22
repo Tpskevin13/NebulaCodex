@@ -1,0 +1,14 @@
+name: Proponer una mejora
+description: Una idea para NebulaCodex
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema querés resolver?
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: ¿Cómo te imaginás la solución?
